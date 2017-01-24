@@ -5,8 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>chige</title>
+  <meta name "discription" content="Chige"> <!--文章の説明-->
+  <link rel="shortcut icon" href="fabicon.ico"> <!--ファビコンの追加-->
+  <link rel="stylesheet" href="mystyles.css"> <!--cssファイル呼び出し-->
 </head>
+
 <body>
+
+  <header>
+    <section>
+      <div class="logo">
+        <img src="images/Chige_logo2-2.png" width="20%" height="20%" alt="Chige">
+      </div>
+      <ul class="menu">
+        <li>
+          <img src="images/works.png" width="20" height="20">
+          <a href="/works/" target="_blank">WORKS</a></li>
+        <li>
+          <img src="images/about.png" width="20" height="20">
+          <a href="/about/" target="_blank">ABOUT</a></li>
+        <li>
+          <img src="images/contact.png" width="20" height="20">
+          <a href="/contact/" target="_blank">CONTACT</a></li>
+      </ul>
+    </section>
+  </header>
+
+  <main class="">
+    <div class="controls">
+      <label>Filter:</label>
+      	<button class="filter" data-filter="all">All</button>
+      	<button class="filter" data-filter=".category-1">Category 1</button>
+      	<button class="filter active" data-filter=".category-2">Category 2</button>
+
+      <label>Sort:</label>
+      	<button class="sort" data-sort="myorder:asc">Asc</button>
+      	<button class="sort" data-sort="myorder:desc">Desc</button>
+    </div>
+
+    <div id="Container">
+      <ul>
+        <li class="mix category-1"><img alt="" src="http://dummyimage.com/250x250/1abc9c/ffffff.png" class="th" /></li>
+        <li class="mix category-1"><img alt="" src="http://dummyimage.com/250x250/1abc9c/ffffff.png" class="th" /></li>
+        <li class="mix category-2"><img alt="" src="http://dummyimage.com/250x250/1abc9c/ffffff.png" class="th" /></li>
+        <li class="mix category-2"><img alt="" src="http://dummyimage.com/250x250/1abc9c/ffffff.png" class="th" /></li>
+      </ul>    <!-- /.#Container -->
+    </div>
+  </main>
+
+  <footer class="">
   あいうえお
+  </footer>
+
+  <script src="jquery-3.1.1.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+  <script>
+    $(function(){
+    $('#Container').mixItUp();
+    });
+  </script>
 </body>
 </html>
