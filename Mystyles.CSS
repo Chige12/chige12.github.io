@@ -45,6 +45,7 @@ header h1 {
 }
 
 .menu-bar ul li {
+  position: relative;
   padding:  0 30px 20px 30px;
   margin-right: 4%;  /*横並びの間*/
   -webkit-transition: all 0.3s ease;
@@ -52,7 +53,6 @@ header h1 {
   -o-transition: all 0.3s ease;
   transition: all  0.3s ease;
 }
-
 .menu-bar ul li:hover {
   margin-top: 20px;
 }
@@ -67,10 +67,24 @@ header h1 {
   background: white;
   transition: 0.6s;
 }
-
 .menu-bar ul li:hover:after {
   width: 100%;
   left: 0;
+}
+
+.menu-bar ul li#works-animation:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background: white;
+  transition: 0.6s;
+}
+
+.works:hover:after {
+  width: 400%;
 }
 
 
