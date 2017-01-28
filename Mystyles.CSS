@@ -22,10 +22,12 @@ header {
   background-color: #6f8050;
 }
 
+header h1 {
+    padding: 250px 0 330px;
+}
+
 .heading-logo {
-  padding: 250px 0;
   max-width: 500px;
-  display: block;
   width: 100%;
   margin: 0;
 }
@@ -33,15 +35,24 @@ header {
 .menu-bar {
   list-style: none;
   display: block;
-
+  font-size: 30px;
 }
 .menu-bar ul {
   display: -webkit-flex; /* Safari */
   display: flex;
 }
 
+.menu-bar ul li {
+  margin-right: 170px;
+}
+.menu-bar ul li:last-child {
+  margin-right: 0;   /*リストの最後だけ右のmarginを0にする*/
+}
+
 .menu-bar img {
-  width: 40px
+    width: 40px;
+    display: block;
+    margin: 0 auto 5px;
 }
 
 main {
