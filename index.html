@@ -32,14 +32,27 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container" >
     あいうえお
 
   </main>
 
-  <footer class="container">
-    あいうえお
-  </footer>
-
+  <script src="script/jquery-3.1.1.min.js"></script>
+  <script src="script/jquery.easing.v1.3.js"></script>
+  <script src="script/jquery.scrollify.min.js"></script>
+  <script>
+  $(function() {
+    $.scrollify({
+      section : ".container",
+      sectionName : "section-name",
+      easing: "easeOutExpo",
+      scrollSpeed: 1100,
+      offset : 0,
+      scrollbars: true,
+      before:function() {},
+      after:function() {}
+      });
+    });
+  </script>
 </body>
 </html>
