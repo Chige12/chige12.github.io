@@ -107,7 +107,7 @@ main {
 .about-nav-h2 .main-logo {/*Chigeのろご*/
   width: 50px;
   display: block;
-  margin: 0 auto 80px;
+  margin: 0 auto 90px;
   padding: 30px 0;  /*上に白い余白がでてしまうのでpadingを使用*/
 }
 
@@ -141,7 +141,7 @@ main {
 }
 
 .about-nav-h2 div.about-text {/*Aboutの文字*/
-  margin-top: 20%;
+  margin-top: 15%;
   text-align: center;
 }
 
