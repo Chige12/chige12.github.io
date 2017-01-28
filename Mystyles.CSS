@@ -140,7 +140,7 @@ main {
   margin: auto;
 }
 
-.about-nav-h2 div {/*Aboutの文字*/
+.about-nav-h2 div.about-text {/*Aboutの文字*/
   margin-top: 20%;
   text-align: center;
 }
