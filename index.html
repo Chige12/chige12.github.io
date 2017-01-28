@@ -13,13 +13,13 @@
 
 <body>
 
-  <header class="container">
+<header class="container" data-section-name="header">
     <h1>
       <a href="#"><img class="heading-logo" src="images/Chige_logo2-2.png" alt="Chige"></a>
     </h1>
     <nav class="menu-bar">
       <ul>
-        <li><a href="index.html">
+        <li><a href="index.html" class="scroll-to-about">
           <img src="images/about.png">
           <div>About</div></a></li>
         <li><a href="works.html">
@@ -32,9 +32,21 @@
     </nav>
   </header>
 
-  <main class="container" >
-    あいうえお
 
+<main class="container" data-section-name="about">
+  <nav>
+    <h2>
+    <a href="index.html" class="scroll-to-header">
+      <img class="main-logo" src="images/Chige_logo2-2.png" alt="Chige"></a>
+    <img class="main-nav" src="images/about.png">
+    <div>About</div></a>
+    </h2>
+  </nav>
+
+  <section>
+    Chige
+    なりなんなり
+  </section>
   </main>
 
   <script src="script/jquery-3.1.1.min.js"></script>
@@ -42,16 +54,25 @@
   <script src="script/jquery.scrollify.min.js"></script>
   <script>
   $(function() {
-    $.scrollify({
-      section : ".container",
-      sectionName : "section-name",
-      easing: "easeOutExpo",
-      scrollSpeed: 1100,
-      offset : 0,
-      scrollbars: true,
-      before:function() {},
-      after:function() {}
+      $.scrollify({
+        section : ".container",
+        sectionName : "section-name",
+        easing: "easeOutExpo",
+        scrollSpeed: 600,
+        offset : 0,
+        scrollbars: true,
+        before:function() {},
+        after:function() {}
+        });
       });
+
+    $(".scroll-to-about").click(function(e) {
+    e.preventDefault();
+    $.scrollify.move("#about");
+    });
+    $(".scroll-to-header").click(function(e) {
+    e.preventDefault();
+    $.scrollify.move("#header");
     });
   </script>
 </body>
