@@ -1,10 +1,5 @@
 
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic);
-@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
-
 body {
-  font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
-  font-family:"Roboto Slab" , Garamond , "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
   margin: 0;
   height: 100vh;
   background: white; /*footerと同色*/
@@ -67,33 +62,50 @@ main {
   width: 100%;
   height: 100%;
   background: white;
+  display: -webkit-flex;
+  display: flex;  /*about-navとabout-mainを縦分割*/
+}
+
+nav .about-nav {
+  margin-right: 10px;
 }
 
 h2 {
+  min-height: 270px;
   background: black;
   color: white;
   width: 100px;
-  height: 30vh;
+  height: 35vh;
   margin-left: 20px;
-}
-
-h2 .main-nav{  /**/
-  width: 60px;
-  display: block;
-  margin: 20px auto;
+  position: relative;
 }
 
 h2 .main-logo {
   width: 50px;
   display: block;
-  margin: 20px auto;
+  margin: 0 auto 70px;
+  padding: 20px 0;
+}
+
+h2 .about-icon{
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: auto;
 }
 
 h2 div {
+  text-align: center;
   width: 50px;
   display: block;
-  margin: 20px auto;
+  margin: 30px auto 20px;
 }
+
+
+section .about-main {
+  margin-left: 10px;
+}
+
 
 @media screen and (max-width: 1100px) {
    /*--- 表示領域が1100px以下の場合に適用するスタイル ---*/
