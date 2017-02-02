@@ -2,7 +2,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background: white; /*footerと同色*/
+  background: lightgray; /*footerと同色*/
 }
 
 .container {
@@ -22,71 +22,62 @@ header {
   height: 100%;
   background-color: #5a5f41;
 }
-
 header h1 {
     padding: 25vh 0 30vh; /*logoの上下余白*/
-}
+  }
+  .heading-logo {
+    max-width: 500px;
+    width: 30%;  /*画像の大きさ*/
+    margin: 0;
+  }
+    .menu-bar {
+      width: 100%;
+      list-style: none;
+      font-size: 30px;
+    }
+    .menu-bar ul {
+      display: -webkit-flex; /* Safari */
+      display: flex;  /*横並び*/
+    }
+    .menu-bar ul li {
+      position: relative;
+      padding:  0 2% 20px 2%;
+      margin-right: 4%;  /*横並びの間*/
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all  0.3s ease;
+    }
+        .menu-bar ul li:hover {
+          margin-top: 20px;
+        }
+    .menu-bar ul li:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: 0;
+      left: 50%;
+      background: white;
+      transition: 0.6s;
+    }
+        .menu-bar ul li:hover:after {
+          width: 100%;
+          left: 0;
+        }
+    .menu-bar ul li:last-child {
+      margin-right: 0;   /*リストの最後だけ右のmarginを0にする*/
+    }
+    .menu-bar img {
+        width: 40px;
+        display: block;  /*横いっぱいに広がる*/
+        margin: 0 auto 5px;  /*中央揃え*/
+    }
 
-.heading-logo {
-  max-width: 500px;
-  width: 30%;  /*画像の大きさ*/
-  margin: 0;
-}
-
-.menu-bar {
-
-  width: 100%;
-  list-style: none;
-  font-size: 30px;
-}
-.menu-bar ul {
-  display: -webkit-flex; /* Safari */
-  display: flex;  /*横並び*/
-}
-
-.menu-bar ul li {
-  position: relative;
-  padding:  0 30px 20px 30px;
-  margin-right: 4%;  /*横並びの間*/
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all  0.3s ease;
-}
-.menu-bar ul li:hover {
-  margin-top: 20px;
-}
-
-.menu-bar ul li:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 50%;
-  background: white;
-  transition: 0.6s;
-}
-.menu-bar ul li:hover:after {
-  width: 100%;
-  left: 0;
-}
-
-
-.menu-bar ul li:last-child {
-  margin-right: 0;   /*リストの最後だけ右のmarginを0にする*/
-}
-
-.menu-bar img {
-    width: 40px;
-    display: block;  /*横いっぱいに広がる*/
-    margin: 0 auto 5px;  /*中央揃え*/
-}
 
 main {
   width: 100%;
   height: 100%;
-  background: white;
   display: -webkit-flex;
   display: flex;  /*about-navとabout-mainを縦分割*/
 }
@@ -94,61 +85,68 @@ main {
 .about-nav {
   margin-right: 40px;
   margin-left: 20px;
-}
-
-.about-nav-h2 {
-  width: 100px;
-  height: 35vh;
-  min-height: 270px;
-  background: black;
-  color: white;
-}
-
-.about-nav-h2 .main-logo {/*Chigeのろご*/
-  width: 50px;
-  display: block;
-  margin: 0 auto 90px;
-  padding: 30px 0;  /*上に白い余白がでてしまうのでpadingを使用*/
-}
-
-.about-nav-h2 .main-logo-animation {
-  position: relative;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all  0.3s ease;
-}
-.about-nav-h2 .main-logo-animation:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 50%;
-  background: white;
-  transition: 0.6s;
-}
-.about-nav-h2 .main-logo-animation:hover:after {
-  width: 100%;
-  left: 0;
-}
-
-
-.about-nav-h2 .about-icon{
-  width: 50px;
-  display: block;
-  margin: auto;
-}
-
-.about-nav-h2 div.about-text {/*Aboutの文字*/
-  margin-top: 15%;
-  text-align: center;
-}
+  }
+  .about-nav-h2 {
+    width: 100px;
+    height: 35vh;
+    min-height: 270px;
+    background: black;
+    color: white;
+  }
+  .about-nav-h2 .main-logo {/*Chigeのろご*/
+    width: 50px;
+    display: block;
+    margin: 0 auto 90px;
+    padding: 30px 0;  /*上に白い余白がでてしまうのでpadingを使用*/
+  }
+  .about-nav-h2 .main-logo-animation {
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+  }
+  .about-nav-h2 .main-logo-animation:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    background: white;
+    transition: 0.6s;
+  }
+      .about-nav-h2 .main-logo-animation:hover:after {
+        width: 100%;
+        left: 0;
+        }
+  .about-nav-h2 .about-icon{
+    width: 50px;
+    display: block;
+    margin: auto;
+  }
+  .about-nav-h2 div.about-text {/*Aboutの文字*/
+    margin-top: 15%;
+    text-align: center;
+  }
 
 .about-main {
   margin: 40px 0 50px;
 }
-
+  .about-main .about-chige {
+    width: 90%;
+    height: 35vh;
+    display: -webkit-flex;
+    display: flex;  /*chige_pngとabout-chige-textを縦分割*/
+  }
+    .about-main .about-chige-png {
+      width: 200px;
+      height: 200px;
+      margin: 5% 10%;
+    }
+    .about-main .about-text1 {
+      margin: 5% 0;
+    }
 
 
 
@@ -168,6 +166,9 @@ main {
   .menu-bar img {
       width: 30px;
     }
+  .menu-bar ul li {
+      padding:  0 15px 20px 15px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -186,5 +187,14 @@ main {
   }
   .menu-bar {
     width: 100%;  /* width の指定を削除 */
+  }
+  .menu-bar ul li {
+      padding:  0 5% 20px 5%;
+    }
+  .menu-bar {
+    font-size: 20px;
+    }
+  .menu-bar img {
+      width: 30px;
   }
 ｝
