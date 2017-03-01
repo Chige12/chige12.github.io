@@ -1,8 +1,20 @@
 body {
   margin: 0;
-  height: 100vh;
-  background-color: #5a5f41;
+  background: #5a5f41;
+  font-size: 62.5%;
+  font-family: Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', serif;
 }
+
+.container {
+  height: 100%;
+  width: 88%;
+  margin: auto;
+}
+
+link { cursor : pointer; }
+
+a:link { color: white; text-decoration: none; }
+a:visited { color: white; text-decoration: none; }
 
 header {
   padding-left: 6%;
@@ -10,52 +22,31 @@ header {
   height: 100%;
   background-color: #5a5f41;
 }
-
-.heading-logo {
-  max-width: 500px;
-  width: 30%;
-  margin: 0;
-}
-.menu-bar {
-  width: 100%;
-  list-style: none;
-  font-size: 30px;
-}
-.menu-bar ul {
-  display: -webkit-flex; /* Safari */
-  display: flex;  /*横並び*/
-}
-.menu-bar ul li {
-  position: relative;
-  padding:  0 2% 20px 2%;
-  margin-right: 4%;  /*横並びの間*/
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all  0.3s ease;
-}
-    .menu-bar ul li:hover {
-      margin-top: 20px;
-    }
-.menu-bar ul li:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 50%;
-  background: white;
-  transition: 0.6s;
-}
-    .menu-bar ul li:hover:after {
-      width: 100%;
-      left: 0;
-    }
-.menu-bar ul li:last-child {
-  margin-right: 0;   /*リストの最後だけ右のmarginを0にする*/
-}
-.menu-bar img {
-    width: 40px;
-    display: block;  /*横いっぱいに広がる*/
-    margin: 0 auto 5px;  /*中央揃え*/
-}
+header h1 {
+    padding: 20vh 0 10vh; /*logoの上下余白*/
+  }
+  .heading-logo {
+    max-width: 500px;
+    width: 30%;  /*画像の大きさ*/
+    margin: 0;
+  }
+  .infomation {
+    color: white;
+    font-size: 1.6rem;
+    padding-bottom: 5vh;
+  }
+  .menu-bar {
+    width: 100%;
+    list-style: none;
+  }
+  .menu-bar ul {
+    display: -webkit-flex; /* Safari */
+    display: flex;  /*横並び*/
+  }
+  .menu-bar ul li {
+    position: relative;
+    margin-right: 2%;
+  }
+  .menu-bar img {
+      width: 2rem;
+  }
