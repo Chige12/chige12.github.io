@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>chige</title>
+  <meta name "discription" content="Chige"> <!--文章の説明-->
+  <link rel="shortcut icon" href="fabicon.ico"> <!--ファビコンの追加-->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="Mystyles.CSS"> <!--cssファイル呼び出し-->
+</head>
+
+<body>
+
+<header class="container" data-section-name="header">
+    <h1>
+      <a href="#"><img class="heading-logo" src="images/Chige_logo2-2.png" alt="Chige_logo"></a>
+    </h1>
+    <nav class="menu-bar">
+      <ul>
+        <li><a href="index.html" class="scroll-to-about">
+          <img src="images/about.png">
+          <div>About</div></a></li>
+        <li><a href="works.html">
+          <img src="images/works.png">
+          <div>Works</div></a></li>
+        <li><a href="contact.html">
+          <img src="images/contact.png">
+          <div>Contact</div></a></li>
+        </ul>
+    </nav>
+  </header>
+
+
+<main class="container" data-section-name="about" class="flexbox">
+  <nav class="about-nav">
+    <h2 class="about-nav-h2">
+    <a href="index.html" class="scroll-to-header">
+      <div class="main-logo-animation">
+        <img class="main-logo" src="images/Chige_logo2-2.png" alt="Chige"></a></div>
+    <img class="about-icon" src="images/about.png">
+    <div class="about-text">About</div></a>
+    </h2>
+  </nav>
+
+  <section class="about-main">
+    <div class="about-chige">
+    <img class="about-chige-png" src="images/Chige.png" alt="Chige">
+    <p class="about-text1">
+      ちげ
+
+    </p>
+    <p class="about-text2">
+  </section>
+  </main>
+
+  <script src="script/jquery-3.1.1.min.js"></script>
+  <script src="script/jquery.easing.v1.3.js"></script>
+  <script src="script/jquery.scrollify.min.js"></script>
+  <script>
+  $(function() {
+      $.scrollify({
+        section : ".container",
+        sectionName : "section-name",
+        easing: "easeOutExpo",
+        scrollSpeed: 600,
+        offset : 0,
+        scrollbars: true,
+        before:function() {},
+        after:function() {}
+        });
+      });
+
+    $(".scroll-to-about").click(function(e) {
+    e.preventDefault();
+    $.scrollify.move("#about");
+    });
+    $(".scroll-to-header").click(function(e) {
+    e.preventDefault();
+    $.scrollify.move("#header");
+    });
+  </script>
+</body>
+</html>
