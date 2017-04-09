@@ -11,49 +11,46 @@
   <link rel="stylesheet" href="Mystyles.CSS"> <!--cssファイル呼び出し-->
 </head>
 
-<body>
+<body id="root">
 
 <header class="container" data-section-name="header">
     <h1>
-      <a href="#"><img class="heading-logo" src="images/Chige_logo2-2.png" alt="Chige_logo"></a>
+      <img class="heading-logo" src="images/Chige_logo2-2.png" alt="Chige_logo">
     </h1>
     <nav class="menu-bar">
       <ul>
-        <li><a href="index.html" class="scroll-to-about">
-          <img src="images/about.png">
-          <div>About</div></a></li>
-        <li><a href="works.html">
-          <img src="images/works.png">
-          <div>Works</div></a></li>
-        <li><a href="contact.html">
-          <img src="images/contact.png">
-          <div>Contact</div></a></li>
-        </ul>
+        <li></li>
     </nav>
   </header>
 
+<div class="gloval_nav_button">
+<nav class="gloval_nav">
+  <ul>
+    <li class="gloval_nav_item" class="scroll-to-header">Home</li>
+    <li class="gloval_nav_item" class="scroll-to-about">About</li>
+    <li class="gloval_nav_item" class="scroll-to-works">Works</li>
+    <li class="gloval_nav_item"><a href="#">Contact</li>
+  </ul>
+</nav>
+</div>
 
-<main class="container" data-section-name="about" class="flexbox">
-  <nav class="about-nav">
-    <h2 class="about-nav-h2">
-    <a href="index.html" class="scroll-to-header">
-      <div class="main-logo-animation">
-        <img class="main-logo" src="images/Chige_logo2-2.png" alt="Chige"></a></div>
-    <img class="about-icon" src="images/about.png">
-    <div class="about-text">About</div></a>
-    </h2>
+<section class="container" class="about" data-section-name="about">
+  <nav class="sub_nav">
+      <img class="sub_nav_icon" src="images/about.png" alt="About">
+      <h2 class="sub_nav_title">
+        About
+      </h2>
   </nav>
-
-  <section class="about-main">
-    <div class="about-chige">
+  <div class="about-chige">
     <img class="about-chige-png" src="images/Chige.png" alt="Chige">
-    <p class="about-text1">
-      ちげ
+    <p>ちげ</p>
+  </div>
+</section>
 
-    </p>
-    <p class="about-text2">
-  </section>
-  </main>
+<section class="container" class="works" data-section-name="works">
+</section>
+
+
 
   <script src="script/jquery-3.1.1.min.js"></script>
   <script src="script/jquery.easing.v1.3.js"></script>
@@ -79,6 +76,10 @@
     $(".scroll-to-header").click(function(e) {
     e.preventDefault();
     $.scrollify.move("#header");
+    });
+    $(".scroll-to-works").click(function(e) {
+    e.preventDefault();
+    $.scrollify.move("#works");
     });
   </script>
 </body>
