@@ -23,33 +23,49 @@
     </nav>
   </header>
 
-<div class="gloval_nav_button">
 <nav class="gloval_nav">
-  <ul>
-    <li class="gloval_nav_item" class="scroll-to-header">Home</li>
-    <li class="gloval_nav_item" class="scroll-to-about">About</li>
-    <li class="gloval_nav_item" class="scroll-to-works">Works</li>
-    <li class="gloval_nav_item"><a href="#">Contact</li>
+  <ul class="gloval_nav_item_top">
+    <li class="gloval_nav_item"><a href="index.html" class="scroll-to-header">Home</a></li>
+    <li class="gloval_nav_item"><a href="index.html" class="scroll-to-about">About</a></li>
+    <li class="gloval_nav_item"><a href="index.html" class="scroll-to-works">Works</a></li>
+    <li class="gloval_nav_item"><a href="index.html" class="scroll-to-contact">Contact</a></li>
   </ul>
 </nav>
-</div>
+
 
 <section class="container" class="about" data-section-name="about">
+  <div class="about-background-1"></div>
+  <div class="about-background-2"></div>
+
   <nav class="sub_nav">
-      <img class="sub_nav_icon" src="images/about.png" alt="About">
+    <img class="sub_nav_icon" src="images/about.png" alt="About">
       <h2 class="sub_nav_title">
         About
       </h2>
   </nav>
-  <div class="about-chige">
-    <img class="about-chige-png" src="images/Chige.png" alt="Chige">
-    <p>ちげ</p>
+
+  <div class="about-me">
+    <div class="about-me-1">
+      <img class="about-chige-png" src="images/Chige.png" alt="Chige">
+      <div>
+        <p class="about-me-name">
+          どうも、<span class="about-me-myname">ちげ</span> です。</p>
+        <p class="about-me-comment">ただのマイクラ好きの高専生です。</p>
+      </div>
+    </div>
+    <div class="about-me-2">
+      <p><a href="http://www.nara-k.ac.jp/" target="_blank">NIT, Nara College 4th Grade</p>
+      <p><a href="http://kosen14s.github.io/" target="_blank">kosen14s</p>
+    </div>
   </div>
+
 </section>
 
 <section class="container" class="works" data-section-name="works">
 </section>
 
+<section class="container" class="contact" data-section-name="contact">
+</section>
 
 
   <script src="script/jquery-3.1.1.min.js"></script>
@@ -80,6 +96,10 @@
     $(".scroll-to-works").click(function(e) {
     e.preventDefault();
     $.scrollify.move("#works");
+    });
+    $(".scroll-to-contact").click(function(e) {
+    e.preventDefault();
+    $.scrollify.move("#contact");
     });
   </script>
 </body>

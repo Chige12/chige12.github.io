@@ -26,7 +26,7 @@ body {
 link { cursor : pointer; }
 a:link { color: white; text-decoration: none; }
 a:visited { color: white; text-decoration: none; }
-
+p { margin: 1rem 0px;   /* 上下に1em・左右に0px */}
 header {
   width: 100vw;
   height: 100vw;
@@ -47,15 +47,6 @@ header h1 {
       list-style: none;
     }
 
-.gloval_nav_button {
-  position: fixed;
-  top: calc(50vh - 30px);
-  right: 40px;
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  background: var(--white);
-}
 .gloval_nav {
   position: fixed;
   top: 0;
@@ -63,7 +54,7 @@ header h1 {
   width: calc(20vw + 250px);
   height: 100vh;
   background: var(--black);
-  transform: translateX(calc(20vw + 400px));
+  transform: translateX(calc(20vw + 300px));
   transition: all 0.4s 0s cubic-bezier(0.17, 1.315, 0.6, 1.00499);
 }
 .gloval_nav:hover{
@@ -79,40 +70,114 @@ header h1 {
   border-top: 100vh solid transparent;
   left: -200px;
 }
+.gloval_nav_item_top {
+  padding-top: 20vh;
+}
+.gloval_nav_item {
+  padding-top: 10vh;
+  padding-left: 8vw;
+  font-size: 3rem;
+  color: white;
+}
 
 .sub_nav {
   position: absolute;
-  border-left: 200px solid var(--black);
+  border-left: 200px solid black;
   border-bottom: 100vh solid transparent;
+  z-index: -2;
 }
 .sub_nav_icon {
   position: absolute;
-  width: 3vw;
-  top: 7vh;
-  left: -155px;
+  width: 40px;
+  top: calc(5vh + 30px);
+  left: -150px;
 }
 .sub_nav_title {
   position: absolute;
-  font-size: 5rem;
-  top: 16vh;
-  left: -160px;
+  font-size: 4rem;
+  top: calc(5vh + 100px);
+  left: -155px;
   color: var(--white);
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
 }
 
-.about-chige {
-    margin: auto;
-    width: 80vw;
-    height: 35vh;
-  }
-.about-chige-png {
-      width: 200px;
-      height: 200px;
-      margin: auto;
-    }
 
+.about-background-1 {
+  content: "";
+  position: absolute;
+  top: 100vh;
+  right: 0;
+  border-right: 100vw solid var(--dark-green);
+  border-bottom: 15vh solid transparent;
+  z-index: -1;
+}
+.about-background-2 {
+  content: "";
+  position: absolute;
+  top: calc(143vh + 13vw);
+  right: 0;
+  background: var(--dark-green);
+  width: 100vw;
+  height: calc(100vh - (43vh + 13vw) + 10vh);
+  z-index: -3;
+}
+.about-background-2::after {
+  content: "";
+  position: absolute;
+  top: -25vh;
+  right: 0;
+  border-right: 100vw solid var(--dark-green);
+  border-top: 25vh solid transparent;
+}
+.about-background-2::before {
+  content: "";
+  position: absolute;
+  bottom: -20vh;
+  right: 0;
+  border-right: 100vw solid var(--dark-green);
+  border-bottom: 20vh solid transparent;
+}
+.about-me {
+  }
+  .about-me-1 {
+    display: flex;
+    width: 50vw;
+    padding-left: calc(190px + 4vw);
+    padding-top: calc(25vh);
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+    .about-chige-png {
+      width: 13vw;
+      height: 13vw;
+      margin: 0;
+      padding: 0;
+      }
+      .about-me-name {
+        width: 40vw;
+        height: 30px;
+        padding-top: 4.8vw;
+        padding-left: 5vw;
+      }
+        .about-me-myname {
+          font-size: 3rem;
+          letter-spacing: 1rem;
+        }
+      .about-me-comment {
+        width: 40vw;
+        height: 20px;
+        padding-left: 5vw;
+        padding-top: 1vw;
+      }
+  .about-me-2 {
+    padding-top: 13vh;
+    padding-right: 15vw;
+    font-size: 2.5rem;
+    text-align: end;
+    letter-spacing: 0.2rem;
+  }
 
 
 
