@@ -23,7 +23,6 @@ body {
   margin: auto;
 }
 
-link { cursor : pointer; }
 a:link { color: white; text-decoration: none; }
 a:visited { color: white; text-decoration: none; }
 p { margin: 1rem 0px;   /* 上下に1em・左右に0px */}
@@ -38,7 +37,7 @@ header h1 {
   .heading-logo {
     width: 24vw;  /*画像の大きさ*/
     margin: 0;
-    padding: 0 calc((100% - 24vw)/2);
+    padding: 0 calc((100% - 24vw)/2); /*中央そろえ*/
   }
     .menu-bar {
       position: fixed;
@@ -47,20 +46,22 @@ header h1 {
       list-style: none;
     }
 
-.gloval_nav {
+.font_JK {
+  font-family: jk-Gothic;
+}
+
+.global_nav {
   position: fixed;
   top: 0;
   right: -50px;
-  width: calc(20vw + 250px);
+  width: calc(13vw + 200px); /*実際は(15vw+150px)の幅(rightが-50のため)*/
   height: 100vh;
   background: var(--black);
-  transform: translateX(calc(20vw + 300px));
+  z-index: 1;
+  transform: translateX(calc(13vw + 200px + 50px));
   transition: all 0.4s 0s cubic-bezier(0.17, 1.315, 0.6, 1.00499);
 }
-.gloval_nav:hover{
-  transform: translateX(0);
-}
-.gloval_nav::before {
+.global_nav::before {
   position: absolute;
   content: "";
   width: 0px;
@@ -70,116 +71,141 @@ header h1 {
   border-top: 100vh solid transparent;
   left: -200px;
 }
-.gloval_nav_item_top {
+.global_nav:hover{
+  transform: translateX(0);
+}
+.global_nav_item_top {
   padding-top: 20vh;
 }
-.gloval_nav_item {
+.global_nav_item {
   padding-top: 10vh;
-  padding-left: 8vw;
+  padding-left: 5vw;
   font-size: 3rem;
   color: white;
 }
 
-.sub_nav {
-  position: absolute;
-  border-left: 200px solid black;
-  border-bottom: 100vh solid transparent;
-  z-index: -2;
-}
-.sub_nav_icon {
-  position: absolute;
-  width: 40px;
-  top: calc(5vh + 30px);
-  left: -150px;
-}
-.sub_nav_title {
-  position: absolute;
-  font-size: 4rem;
-  top: calc(5vh + 100px);
-  left: -155px;
-  color: var(--white);
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-}
-
-
-.about-background-1 {
+.about-slanting-background {
   content: "";
   position: absolute;
-  top: 100vh;
+  top: 0;
   right: 0;
   border-right: 100vw solid var(--dark-green);
   border-bottom: 15vh solid transparent;
   z-index: -1;
 }
-.about-background-2 {
-  content: "";
-  position: absolute;
-  top: calc(143vh + 13vw);
-  right: 0;
+.global_section_bar {
+  position: fixed;
+  top: 10vh;
+  left: 0;
   background: var(--dark-green);
-  width: 100vw;
-  height: calc(100vh - (43vh + 13vw) + 10vh);
-  z-index: -3;
+  width: 18px;
+  height: 14vh;
 }
-.about-background-2::after {
-  content: "";
+.container {
+  position: relative;
+}
+.section_title {
   position: absolute;
-  top: -25vh;
-  right: 0;
-  border-right: 100vw solid var(--dark-green);
-  border-top: 25vh solid transparent;
+  top: 9vh;
+  left: 40px;
+  height: 20vh;
 }
-.about-background-2::before {
-  content: "";
-  position: absolute;
-  bottom: -20vh;
-  right: 0;
-  border-right: 100vw solid var(--dark-green);
-  border-bottom: 20vh solid transparent;
+
+.objects_wrapper {/*背景object基準位置*/
+  position: relative;
+  width: 0;
+  top: calc(26vh + 50px);
+  left: calc(9vw + 50px);
 }
-.about-me {
+  .chige_full_png {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16vw;
   }
-  .about-me-1 {
+
+  .chige_name_circle {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: calc(16vw / -2 - 20px); /*中心(半径)から上に10px*/
+    left: 13vw;
+    width: 16vw;
+    height: 16vw;
+    border-radius:100%;
+    background: var(--dark-green);
+  }
+    .chige_name_Jp { /*fontの記述は上部font_JK*/
+      padding-top: calc(11.5vh);
+      font-size: 2vw;
+    }
+    .chige_name_En {
+      padding-top: 2.5vh;
+      font-size: 1vw;
+    }
+    .liner_left {
+      position: absolute;
+      width: 20vw;
+      height: 8vh;
+      top: calc(16vw / 2 - 25px);
+      left: calc(16vw / 2 + 13vw - 0.1vw); /*0.1vwはborder*/
+      border-left: 0.2vw solid;
+      border-bottom: 0.2vw solid;
+      border-radius: 0 0 0 2vw;
+      border-color: var(--dark-green);
+    }
+    .liner_right {
+      position: absolute;
+      width: 24vw;
+      height: calc(195vh - (26vh + 50px + 8vh + (16vw / 2 - 25px) + 0.2vw));
+      /*高さ-(objects_wrapperのtop＋liner_leftのheight＋top＋border幅)*/
+      top: calc(8vh + (16vw / 2 - 25px) - 0.05vw);
+      left: calc(20vw + (16vw / 2 + 13vw - 0.1vw));
+      border-top: 0.2vw solid;
+      border-right: 0.2vw solid;
+      border-radius: 0 2vw 0 0;
+      border-color: var(--dark-green);
+    }
+  .self_introduction {
+    position: absolute;
+    color: black;
+    width: 30vw;
+    height: calc(14vh);
+    top: 0;
+    left: calc((16vw + 13vw) + 3vw); /*円の右端位置＋α*/
+  }
+    .school_info {
+      padding-left: 0.15vw;
+      font-size: 1vw;
+    }
+    .uchida_keita {
+      font-size: 3.2vw;
+    }
+  .free_space {
     display: flex;
-    width: 50vw;
-    padding-left: calc(190px + 4vw);
-    padding-top: calc(25vh);
-    font-size: 2rem;
-    letter-spacing: 0.2rem;
+    position: absolute;
+    width: calc(20vw + 25vw + 2vw + 4vw);
+    top: calc((16vw / 2) + 8vh + 8vh);
+    left: calc(16vw / 2 + 13vw);
   }
-    .about-chige-png {
-      width: 13vw;
-      height: 13vw;
-      margin: 0;
-      padding: 0;
-      }
-      .about-me-name {
-        width: 40vw;
-        height: 30px;
-        padding-top: 4.8vw;
-        padding-left: 5vw;
-      }
-        .about-me-myname {
-          font-size: 3rem;
-          letter-spacing: 1rem;
-        }
-      .about-me-comment {
-        width: 40vw;
-        height: 20px;
-        padding-left: 5vw;
-        padding-top: 1vw;
-      }
-  .about-me-2 {
-    padding-top: 13vh;
-    padding-right: 15vw;
-    font-size: 2.5rem;
-    text-align: end;
-    letter-spacing: 0.2rem;
-  }
-
-
+    .about_skills {
+      width: 20vw;
+      padding-top: calc(7vh - 20px);
+      text-align: right;
+      font-size: 1.6vw;
+    }
+    .free_comment_box {
+      width: 23vw;
+      height: 12vh;
+      margin: 0 0 0 2vw;
+      text-align: left;
+      font-size: 1vw;
+      background: var(--dark-green);
+      border-radius: 2vw;
+      color: white;
+      padding-top: calc(10vh - 40px);
+      padding-left: 4vw;
+    }
 
 @media screen and (max-width: 1100px) {
    /*--- 表示領域が1100px以下の場合に適用するスタイル ---*/
