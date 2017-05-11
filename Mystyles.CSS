@@ -148,21 +148,21 @@ header h1 {
       width: 20vw;
       height: 8vh;
       top: calc(16vw / 2 - 25px);
-      left: calc(16vw / 2 + 13vw - 0.1vw); /*0.1vwはborder*/
-      border-left: 0.2vw solid;
-      border-bottom: 0.2vw solid;
+      left: calc(16vw / 2 + 13vw - 2px); /*2pxはborder*/
+      border-left: 4px solid;
+      border-bottom: 4px solid;
       border-radius: 0 0 0 2vw;
       border-color: var(--dark-green);
     }
     .liner_right {
       position: absolute;
       width: 24vw;
-      height: calc(195vh - (26vh + 50px + 8vh + (16vw / 2 - 25px) + 0.2vw));
+      height: calc(195vh - (26vh + 50px + 8vh + (16vw / 2 - 25px) + 4px));
       /*高さ-(objects_wrapperのtop＋liner_leftのheight＋top＋border幅)*/
-      top: calc(8vh + (16vw / 2 - 25px) - 0.05vw);
-      left: calc(20vw + (16vw / 2 + 13vw - 0.1vw));
-      border-top: 0.2vw solid;
-      border-right: 0.2vw solid;
+      top: calc(8vh + (16vw / 2 - 25px));
+      left: calc(20vw + (16vw / 2 + 13vw - 2px));
+      border-top: 4px solid;
+      border-right: 4px solid;
       border-radius: 0 2vw 0 0;
       border-color: var(--dark-green);
     }
