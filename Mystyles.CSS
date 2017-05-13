@@ -9,6 +9,7 @@ html{
     --light-gray:   #CCCCCC;
     --dark-green:   #5a5f41;
     --black:        rgba(0, 0, 0, 0.70);
+    --main-text:    #000000;
   }
 
 body {
@@ -23,8 +24,8 @@ body {
   margin: auto;
 }
 
-a:link { color: white; text-decoration: none; }
-a:visited { color: white; text-decoration: none; }
+a:link {color: var(--main-text); text-decoration: none; }
+a:visited { color: var(--main-text); text-decoration: none; }
 p { margin: 1rem 0px;   /* 上下に1em・左右に0px */}
 header {
   width: 100vw;
@@ -50,7 +51,7 @@ header h1 {
   font-family: jk-Gothic;
 }
 
-.global_nav {
+#global_nav {
   position: fixed;
   top: 0;
   right: -50px;
@@ -58,28 +59,31 @@ header h1 {
   height: 100vh;
   background: var(--black);
   z-index: 1;
-  transform: translateX(calc(13vw + 200px + 50px));
+  transform: translateX(calc(13vw + 150px + 5vw));
   transition: all 0.4s 0s cubic-bezier(0.17, 1.315, 0.6, 1.00499);
 }
-.global_nav::before {
+#global_nav a:link {color: var(--white);}
+#global_nav a:visited {color: var(--white);}
+#global_nav::before {
   position: absolute;
   content: "";
   width: 0px;
   height: 0px;
   top: 0px;
-  border-right: 200px solid var(--black);
+  border-right: 10vw solid var(--black);
   border-top: 100vh solid transparent;
-  left: -200px;
+  left: -10vw;
 }
-.global_nav:hover{
+#global_nav.motion{
   transform: translateX(0);
 }
 .global_nav_item_top {
   padding-top: 20vh;
 }
 .global_nav_item {
-  padding-top: 10vh;
-  padding-left: 5vw;
+  width: 6vw;
+  padding: 2vw;
+  margin: 4vh 0 4vh 4vw;
   font-size: 3rem;
   color: white;
 }
@@ -136,11 +140,11 @@ header h1 {
     background: var(--dark-green);
   }
     .chige_name_Jp { /*fontの記述は上部font_JK*/
-      padding-top: calc(11.5vh);
+      padding-top: calc(6vw);
       font-size: 2vw;
     }
     .chige_name_En {
-      padding-top: 2.5vh;
+      padding-top: 2vw;
       font-size: 1vw;
     }
     .liner_left {
@@ -167,6 +171,7 @@ header h1 {
       border-color: var(--dark-green);
     }
   .self_introduction {
+    color: var(--main-text);
     position: absolute;
     color: black;
     width: 30vw;
@@ -186,10 +191,11 @@ header h1 {
     position: absolute;
     width: calc(20vw + 25vw + 2vw + 4vw);
     top: calc((16vw / 2) + 8vh + 8vh);
-    left: calc(16vw / 2 + 13vw);
+    left: calc(16vw / 2 + 12vw);
   }
     .about_skills {
-      width: 20vw;
+      color: var(--dark-green);
+      width: 21vw;
       padding-top: calc(7vh - 20px);
       text-align: right;
       font-size: 1.6vw;
@@ -207,9 +213,151 @@ header h1 {
       padding-left: 4vw;
     }
 
-@media screen and (max-width: 1100px) {
+.background_alphalogo_svg {
+  display: none;
+  position: absolute;
+}
+
+
+@media screen and (max-width: 1200px) {
    /*--- 表示領域が1100px以下の場合に適用するスタイル ---*/
 
 
 @media screen and (max-width: 768px) {
-   /*--- 表示領域が768px以上の場合に適用するスタイル（スマホ）---*/
+   /*--- 表示領域が768px以下の場合に適用するスタイル（スマホ）---*/
+  #global_nav {
+    transform: translateX(calc(13vw + 150px + 12vw));
+   }
+  #global_nav::before {
+    border-right: 20vw solid var(--black);
+    left: -20vw;
+  }
+  .global_nav_item {
+    width: 20vw;
+    padding: 5vw;
+    margin: 5vh 0 5vh 8vw;
+    font-size: 2rem;
+  }
+  .global_section_bar {
+    display: none;
+  }
+  .section_title {
+    top: 6vh;
+    left: 5vw;
+    height: 18vh;
+  }
+  .objects_wrapper {
+    top: 28vh;
+    left: 5vw;
+  }
+  .chige_full_png {
+    top: 17vh;
+    left: 0;
+    width: 30vw;
+  }
+  .chige_name_circle {
+    top: calc(-30vw + 70px);
+    left: 28vw;
+    width: 30vw;
+    height: 30vw;
+  }
+    .chige_name_Jp {
+      padding-top: 11vw;
+      font-size: 4vw;
+    }
+    .chige_name_En {
+      padding-top: 2vw;
+      font-size: 2vw;
+    }
+  .liner_left {
+    width: 23vw;
+    height: 28vh;
+    top: calc(16vw / 2 - 25px);
+    left: calc(30vw / 2 + 20vw - 1.5px);
+    border-left: 3px solid;
+    border-bottom: 3px solid;
+    border-radius: 0 0 0 3vw;
+    border-color: var(--dark-green);
+  }
+  .liner_right {
+    width: 24vw;
+    height: calc(195vh - (26vh + 50px + 28vh + (16vw / 2 - 25px) + 3px));
+    top: calc(28vh + (16vw / 2 - 25px));
+    left: calc(23vw + (30vw / 2 + 20vw - 2px));
+    border-top: 3px solid;
+    border-right: 3px solid;
+    border-radius: 0 3vw 0 0;
+    border-color: var(--dark-green);
+  }
+  .self_introduction {
+    color: black;
+    width: 50vw;
+    height: 12vh;
+    top: 16vh;
+    left: calc(30vw / 2 + 20vw + 5vw);
+  }
+  .school_info {
+    padding-left: 0.2vw;
+    font-size: 2vw;
+  }
+  .uchida_keita {
+    padding-top: 1vh;
+    font-size: 4vw;
+  }
+  .free_space {
+    display: block;
+    position: absolute;
+    width: 47.3vw;
+    top: calc((16vw / 2 - 25px) + 30vh);
+    left: calc(calc(30vw / 2 + 20vw - 1.5px));
+  }
+  .about_skills {
+    color: var(--dark-green);
+    width: 40vw;
+    padding-top: calc(4vh - 20px);
+    text-align: right;
+    font-size: 2.6vw;
+  }
+  .free_comment_box {
+    width: 43vw;
+    height: 11vh;
+    margin: 4vh 0 0 0;
+    text-align: left;
+    font-size: 2vw;
+    background: var(--dark-green);
+    border-radius: 3vw 0 0 3vw;
+    color: white;
+    padding-top: calc( 9vh - 40px);
+    padding-left: 4vw;
+  }
+
+  @media screen and (max-width: 400px) {
+     /*--- 表示領域が420px以下の場合に適用するスタイル（スマホ）---*/
+    .liner_left {
+      width: 23vw;
+      height: 28vh;
+      top: calc(30vw / 2 - 25px);
+      left: calc(30vw / 2 + 20vw - 1.5px);
+    }
+    .liner_right {
+      width: 24vw;
+      height: calc(195vh - (26vh + 50px + 28vh + (30vw / 2 - 25px) + 3px));
+      top: calc(28vh + (30vw / 2 - 25px));
+      left: calc(23vw + (30vw / 2 + 20vw - 2px));
+    }
+    .self_introduction {
+      width: 44vw;
+    }
+    .uchida_keita {
+      padding-top: 0;
+      font-size: 5vw;
+    }
+    .free_space {
+      top: calc((30vw / 2 - 25px) + 30vh);
+    }
+    .about_skills {
+      font-size: 2vw;
+    }
+    .free_comment_box {
+      font-size: 1vw;
+    }
