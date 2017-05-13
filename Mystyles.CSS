@@ -62,7 +62,7 @@ header h1 {
   width: calc(13vw + 200px); /*実際は(15vw+150px)の幅(rightが-50のため)*/
   height: 100vh;
   background: var(--black);
-  z-index: 1;
+  z-index: 3;
   transform: translateX(calc(13vw + 150px + 5vw));
   transition: all 0.4s 0s cubic-bezier(0.17, 1.315, 0.6, 1.00499);
 }
@@ -244,16 +244,22 @@ header h1 {
 @media screen and (max-width: 768px) {
    /*--- 表示領域が768px以下の場合に適用するスタイル（スマホ）---*/
   #global_nav {
-    transform: translateX(calc(13vw + 150px + 12vw));
+    transform: translateX(calc(13vw + 150px + 20vw));
    }
   #global_nav::before {
-    border-right: 20vw solid var(--black);
-    left: -20vw;
+    border-right: 30vw solid var(--black);
+    left: -30vw;
+  }
+  #global_nav.motion {
+    transform: translateX(23vw);
+}
+  .global_nav_item_top {
+    padding-top: 35vh;
   }
   .global_nav_item {
     width: 20vw;
-    padding: 5vw;
-    margin: 5vh 0 5vh 8vw;
+    padding: 2vw;
+    margin: 7vh 0;
     font-size: 2rem;
   }
   .global_section_bar {
@@ -264,95 +270,88 @@ header h1 {
     left: 5vw;
     height: 18vh;
   }
+  .about-slanting-background {
+    border-bottom: 20vh solid transparent;
+  }
   .objects_wrapper {
-    top: 23vh;
+    top: 25vh;
     left: 5vw;
   }
   .chige_full_png {
-    top: 17vh;
-    left: 0;
-    width: 30vw;
+    height: 41vh;
   }
   .chige_name_circle {
-    top: calc(-30vw + 70px);
-    left: 30vw;
-    width: 30vw;
-    height: 30vw;
+    top: -21vh;
+    left: 45vw;
+    width: 36vw;
+    height: 36vw;
   }
-    .chige_name_Jp {
-      padding-top: 11vw;
-      font-size: 1.6rem;
-    }
-    .chige_name_En {
-      padding-top: 2vw;
-      font-size: 0.8rem;
-    }
+  .chige_name_Jp {
+    padding-top: 12vw;
+    width: 15vw;
+  }
+  .chige_name_En {
+    padding-top: 0.5vw;
+    font-size: 1rem;
+  }
   .liner_left {
-    width: 23vw;
-    height: 15vh;
-    top: 17vh;
-    left: calc(30vw / 2 + 20vw - 1px);
+    width: 25vw;
+    height: 24vh;
+    top: 0;
+    left: 38vw;
     border-left: 2px solid;
     border-bottom: 2px solid;
     border-radius: 0 0 0 3vw;
     border-color: var(--dark-green);
   }
   .liner_right {
-    width: 24vw;
-    height: calc(195vh - (26vh + 50px + (15vh + 17vh) + 2px));
-    top: calc(15vh + 17vh);
-    left: calc(23vw + (30vw / 2 + 20vw - 2px));
+    width: 25vw;
+    height: calc(195vh - (28vh + 24vh));
+    top: 24vh;
+    left: calc(38vw + 25vw);
     border-top: 2px solid;
     border-right: 2px solid;
     border-radius: 0 3vw 0 0;
     border-color: var(--dark-green);
   }
   .self_introduction {
-    color: black;
-    width: 50vw;
-    height: 12vh;
-    top: 16vh;
-    left: calc(30vw / 2 + 20vw + 5vw);
+    left: 38vw;
+    width: calc(25vw * 2);
+    height: 64vh;
+  }
+  .about_me_blocks1 {
+    height: 24vh;
+  }
+  .about_me_blocks2-3 {
+    height: 20vh;
   }
   .school_info {
-    padding-left: 0.2vw;
+    margin: 6.5vh 4.5vw 1vh;
     font-size: 0.8rem;
+    padding-left: 0.15vw;
   }
   .uchida_keita {
-    padding-top: 1vh;
+    margin: 0 4.5vw;
     font-size: 2rem;
   }
-  .free_space {
-    width: 47.3vw;
-    top: calc(17vh + 15vh);
-    left: calc(calc(30vw / 2 + 20vw - 1.5px));
-  }
   .about_skills {
-    padding: 2vh 5vw 2vh 0;
-    font-size: 1rem;
-  }
-  .free_comment_box {
+    padding: 4.5vh 3vw 0 0;
     font-size: 0.8rem;
-    border-radius: 3vw 0 0 3vw;
-    padding: 2vh 3vw 2vh 5vw;
   }
+  .about_free_comment {
+    padding: 5.5vh 0 5.5vh 10vw;
+    font-size: 1rem;
+    border-radius: 3vw 0 0 3vw;
+    position: absolute;
+    right: 0;
+    width: 78vw;
+  }
+  .background_alphalogo_svg {
+    width: 90vw;
+    top: 23vw;
+    left: 5vw;
+  }
+
 
   @media screen and (max-width: 400px) {
      /*--- 表示領域が420px以下の場合に適用するスタイル（スマホ）---*/
-    .liner_left {
-      width: 23vw;
-      height: 15vh;
-      top: 17vh;
-      left: calc(30vw / 2 + 20vw - 1px);
-    }
-    .liner_right {
-      width: 24vw;
-      top: calc(15vh + 17vh);
-      left: calc(23vw + (30vw / 2 + 20vw - 2px));
-    }
-    .self_introduction {
-      width: 44vw;
-    }
-    .uchida_keita {
-      padding-top: 0;
-    }
