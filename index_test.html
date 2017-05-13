@@ -103,41 +103,6 @@
   <script src="script/jquery-3.1.1.min.js"></script>
   <script src="script/jquery.easing.v1.3.js"></script>
   <script src="script/jquery.scrollify.min.js"></script>
-  <script>
-  $(function() {
-      $.scrollify({
-        section : ".container",
-        sectionName : "section-name",
-        easing: "easeOutExpo",
-        scrollSpeed: 600,
-        offset : 0,
-        scrollbars: true,
-        before:function() {},
-        after:function() {}
-        });
-      });
-
-    $(".scroll-to-header").click(function(e) {
-    e.preventDefault();
-    $.scrollify.move("#header");
-    });
-    $(".scroll-to-about").click(function(e) {
-    e.preventDefault();
-    $.scrollify.move("#about");
-    });
-    $(".scroll-to-history").click(function(e) {
-    e.preventDefault();
-    $.scrollify.move("#history");
-    });
-    $(".scroll-to-works").click(function(e) {
-    e.preventDefault();
-    $.scrollify.move("#works");
-    });
-    $(".scroll-to-contact").click(function(e) {
-    e.preventDefault();
-    $.scrollify.move("#contact");
-    });
-  </script>
-    <script src="script/main.js"></script>
+  <script src="script/main.js"></script>
 </body>
 </html>
