@@ -288,22 +288,22 @@ header h1 {
   .chige_name_circle {
     top: -21vh;
     left: 45vw;
-    width: 36vw;
-    height: 36vw;
+    width: 24vh;
+    height: 24vh;
   }
   .chige_name_Jp {
-    padding-top: 12vw;
-    width: 15vw;
+    padding-top: 9vh;
+    width: 9vh;
   }
   .chige_name_En {
-    padding-top: 0.5vw;
-    font-size: 1rem;
+    padding-top: 0.5vh;
+    font-size: 1.3rem;
   }
   .liner_left {
     width: 25vw;
     height: 24vh;
     top: 0;
-    left: 38vw;
+    left: 24vh;
     border-left: 2px solid;
     border-bottom: 2px solid;
     border-radius: 0 0 0 3vw;
@@ -313,27 +313,35 @@ header h1 {
     width: 25vw;
     height: calc(195vh - (28vh + 24vh));
     top: 24vh;
-    left: calc(38vw + 25vw);
+    left: calc(25vw + 24vh);
     border-top: 2px solid;
     border-right: 2px solid;
     border-radius: 0 3vw 0 0;
     border-color: var(--dark-green);
   }
   .self_introduction {
-    left: 38vw;
+    left: 24vh;
     width: calc(25vw * 2);
-    height: 64vh;
+    height: 44vh;
   }
   .about_me_blocks1 {
     height: 24vh;
   }
-  .about_me_blocks2-3 {
+  .about_me_blocks2 {
     height: 20vh;
   }
+  .about_me_blocks3 {
+    height: 20vh;
+    position: absolute;
+    top: 45vh;
+    right: 0;
+    width: calc(25vw * 2 + 24vh);
+  }
   .school_info {
-    margin: 6.5vh 4.5vw 1vh;
+    margin: 7vh 4.5vw 1vh;
     font-size: 1rem;
     padding-left: 0.15vw;
+    border-radius: 3vw 0 0 3vw;
   }
   .uchida_keita {
     margin: 0 4.5vw;
@@ -344,19 +352,27 @@ header h1 {
     font-size: 1.2rem;
   }
   .about_free_comment {
-    padding: 5.5vh 0 5.5vh 10vw;
+    padding: 6vh 0 0 10vw;
     font-size: 1rem;
-    border-radius: 3vw 0 0 3vw;
-    position: absolute;
-    right: 0;
-    width: 78vw;
   }
   .background_alphalogo_svg {
     width: 90vw;
-    top: 23vw;
+    top: 18vh;
     left: 5vw;
   }
 
 
   @media screen and (max-width: 400px) {
      /*--- 表示領域が420px以下の場合に適用するスタイル（スマホ）---*/
+  .liner_left {
+    left: 22vh;
+  }
+  .liner_right {
+    left: calc(25vw + 22vh);
+  }
+  .self_introduction {
+    left: 22vh;
+  }
+  .about_me_blocks3 {
+    width: calc(25vw * 2 + 22vh);
+  }
