@@ -13,8 +13,12 @@ $(function () {
  var ua = navigator.userAgent;
  if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
      // スマートフォン用コード
+         $.scrollify.disable();
+         });
  } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
      // タブレット用コード
+         $.scrollify.disable();
+         });
  } else {
      // PC用コード
          $.scrollify({
