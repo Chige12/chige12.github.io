@@ -254,7 +254,7 @@ header h1 {
     transform: translateX(23vw);
 }
   .global_nav_item_top {
-    padding-top: 35vh;
+    padding-top: 30vh;
   }
   .global_nav_item {
     width: 20vw;
@@ -327,7 +327,7 @@ header h1 {
   }
   .school_info {
     margin: 6.5vh 4.5vw 1vh;
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding-left: 0.15vw;
   }
   .uchida_keita {
@@ -336,7 +336,7 @@ header h1 {
   }
   .about_skills {
     padding: 4.5vh 3vw 0 0;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
   .about_free_comment {
     padding: 5.5vh 0 5.5vh 10vw;
