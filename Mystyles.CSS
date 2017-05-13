@@ -4,9 +4,15 @@ html{
     font-size: 62.5%;
 }
 
+@font-face {
+  font-family: 'Coves Bold';
+  src: url('font/Coves Bold.otf') format('opentype');
+}
+
 #root {
     --white:        #FFFFFF;
-    --light-gray:   #CCCCCC;
+    --light-gray:   #dddddd;
+    --pale-gray:    #eaeaea;
     --dark-green:   #5a5f41;
     --black:        rgba(0, 0, 0, 0.70);
     --main-text:    #000000;
@@ -16,6 +22,8 @@ body {
   margin: 0;
   height: 100vh;
   background: var(--light-gray); /*footerと同色*/
+  font-family: "Mplus 1p";
+  font-weight: 100;
 }
 
 .container {
@@ -46,10 +54,6 @@ header h1 {
       width: 100%;
       list-style: none;
     }
-
-.font_JK {
-  font-family: jk-Gothic;
-}
 
 #global_nav {
   position: fixed;
@@ -84,7 +88,8 @@ header h1 {
   width: 6vw;
   padding: 2vw;
   margin: 4vh 0 4vh 4vw;
-  font-size: 3rem;
+  font-family: "Coves Bold";
+  font-size: 3.3rem;
   color: white;
 }
 
@@ -104,6 +109,7 @@ header h1 {
   background: var(--dark-green);
   width: 18px;
   height: 14vh;
+  z-index: 1;
 }
 .container {
   position: relative;
@@ -118,14 +124,14 @@ header h1 {
 .objects_wrapper {/*背景object基準位置*/
   position: relative;
   width: 0;
-  top: calc(26vh + 50px);
-  left: calc(9vw + 50px);
+  top: 26vh;
+  left: 15vw;
 }
   .chige_full_png {
     position: absolute;
     top: 0;
     left: 0;
-    width: 16vw;
+    height: 66vh;
   }
 
   .chige_name_circle {
@@ -134,25 +140,28 @@ header h1 {
     position: absolute;
     top: calc(16vw / -2 - 20px); /*中心(半径)から上に10px*/
     left: 13vw;
-    width: 16vw;
-    height: 16vw;
+    width: 14vw;
+    height: 14vw;
     border-radius:100%;
     background: var(--dark-green);
+    z-index: 1;
   }
     .chige_name_Jp { /*fontの記述は上部font_JK*/
-      padding-top: calc(6vw);
-      font-size: 2vw;
+      padding-top: 5vw;
+      padding-right: 0.1vw;
+      width: 5vw;
     }
     .chige_name_En {
-      padding-top: 2vw;
-      font-size: 1vw;
+      padding-top: 0.5vw;
+      font-family: "Coves Bold";
+      font-size: 1.2vw;
     }
     .liner_left {
       position: absolute;
-      width: 20vw;
-      height: 8vh;
-      top: calc(16vw / 2 - 25px);
-      left: calc(16vw / 2 + 13vw - 2px); /*2pxはborder*/
+      width: 22vw;
+      height: 26vh;
+      top: 0;
+      left: 42vh;
       border-left: 4px solid;
       border-bottom: 4px solid;
       border-radius: 0 0 0 2vw;
@@ -160,62 +169,71 @@ header h1 {
     }
     .liner_right {
       position: absolute;
-      width: 24vw;
-      height: calc(195vh - (26vh + 50px + 8vh + (16vw / 2 - 25px) + 4px));
-      /*高さ-(objects_wrapperのtop＋liner_leftのheight＋top＋border幅)*/
-      top: calc(8vh + (16vw / 2 - 25px));
-      left: calc(20vw + (16vw / 2 + 13vw - 2px));
+      width: 22vw;
+      height: calc(195vh - (28vh + 26vh));
+      top: 26vh;
+      left: calc(22vw + (16vw / 2 + 13vw));
       border-top: 4px solid;
       border-right: 4px solid;
       border-radius: 0 2vw 0 0;
       border-color: var(--dark-green);
     }
+
   .self_introduction {
-    color: var(--main-text);
     position: absolute;
-    color: black;
-    width: 30vw;
-    height: calc(14vh);
+    display: grid;
     top: 0;
-    left: calc((16vw + 13vw) + 3vw); /*円の右端位置＋α*/
+    left: 42vh;
+    width: calc((22vw - 4px) * 2);
+    height: 66vh;
   }
-    .school_info {
-      padding-left: 0.15vw;
-      font-size: 1vw;
+    .about_me_blocks1 {
+      height: 26vh;
     }
-    .uchida_keita {
-      font-size: 3.2vw;
+    .about_me_blocks2-3 {
+      height: 20vh;
     }
-  .free_space {
-    display: flex;
-    position: absolute;
-    width: calc(20vw + 25vw + 2vw + 4vw);
-    top: calc((16vw / 2) + 8vh + 8vh);
-    left: calc(16vw / 2 + 12vw);
-  }
-    .about_skills {
-      color: var(--dark-green);
-      width: 21vw;
-      padding-top: calc(7vh - 20px);
-      text-align: right;
-      font-size: 1.6vw;
-    }
-    .free_comment_box {
-      width: 23vw;
-      height: 12vh;
-      margin: 0 0 0 2vw;
-      text-align: left;
-      font-size: 1vw;
-      background: var(--dark-green);
-      border-radius: 2vw;
-      color: white;
-      padding-top: calc(10vh - 40px);
-      padding-left: 4vw;
-    }
+      .school_info {
+        color: var(--main-text);
+        margin: 8.5vh 4.5vw 1vh;
+        font-family: "Coves Bold";
+        font-size: 1.2vw;
+        padding-left: 0.15vw;
+      }
+      .uchida_keita {
+        color: var(--main-text);
+        margin: 0 4.5vw;
+        font-family: "Coves Bold";
+        font-size: 3vw;
+      }
+      .about_skills {
+        padding: 6vh 4.5vw 0;
+        color: var(--main-text);
+        font-family: "Coves Bold";
+        font-size: 1.5vw;
+        text-align: right;
+      }
+      .about_free_comment {
+        padding: 6.7vh 4.5vw 6.3vh;
+        background: var(--dark-green);
+        font-size: 1vw;
+        border-radius: 2vw 0 0 2vw;
+        color: white;
+      }
 
 .background_alphalogo_svg {
-  display: none;
-  position: absolute;
+  position: fixed;
+  z-index: -2;
+  width: 80vw;
+  top: 10vw;
+  left: 9vw;
+}
+
+.works_background {
+  width: 100%;
+  height: 100%;
+  background-color: var(--pale-gray);
+  z-index: auto;
 }
 
 
@@ -263,7 +281,7 @@ header h1 {
   }
     .chige_name_Jp {
       padding-top: 11vw;
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
     .chige_name_En {
       padding-top: 2vw;
@@ -271,8 +289,8 @@ header h1 {
     }
   .liner_left {
     width: 23vw;
-    height: 28vh;
-    top: calc(16vw / 2 - 25px);
+    height: 15vh;
+    top: 17vh;
     left: calc(30vw / 2 + 20vw - 1px);
     border-left: 2px solid;
     border-bottom: 2px solid;
@@ -281,8 +299,8 @@ header h1 {
   }
   .liner_right {
     width: 24vw;
-    height: calc(195vh - (26vh + 50px + 28vh + (16vw / 2 - 25px) + 2px));
-    top: calc(28vh + (16vw / 2 - 25px));
+    height: calc(195vh - (26vh + 50px + (15vh + 17vh) + 2px));
+    top: calc(15vh + 17vh);
     left: calc(23vw + (30vw / 2 + 20vw - 2px));
     border-top: 2px solid;
     border-right: 2px solid;
@@ -298,51 +316,38 @@ header h1 {
   }
   .school_info {
     padding-left: 0.2vw;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
   .uchida_keita {
     padding-top: 1vh;
     font-size: 2rem;
   }
   .free_space {
-    display: block;
-    position: absolute;
     width: 47.3vw;
-    top: calc((16vw / 2 - 25px) + 30vh);
+    top: calc(17vh + 15vh);
     left: calc(calc(30vw / 2 + 20vw - 1.5px));
   }
   .about_skills {
-    color: var(--dark-green);
-    width: 40vw;
-    padding-top: calc(4vh - 20px);
-    text-align: right;
+    padding: 2vh 5vw 2vh 0;
     font-size: 1rem;
   }
   .free_comment_box {
-    width: 43vw;
-    height: 11vh;
-    margin: 4vh 0 0 0;
-    text-align: left;
-    font-size: 0.6rem;
-    background: var(--dark-green);
+    font-size: 0.8rem;
     border-radius: 3vw 0 0 3vw;
-    color: white;
-    padding-top: calc( 9vh - 40px);
-    padding-left: 4vw;
+    padding: 2vh 3vw 2vh 5vw;
   }
 
   @media screen and (max-width: 400px) {
      /*--- 表示領域が420px以下の場合に適用するスタイル（スマホ）---*/
     .liner_left {
       width: 23vw;
-      height: 28vh;
-      top: calc(30vw / 2 - 25px);
-      left: calc(30vw / 2 + 20vw - 1.5px);
+      height: 15vh;
+      top: 17vh;
+      left: calc(30vw / 2 + 20vw - 1px);
     }
     .liner_right {
       width: 24vw;
-      height: calc(195vh - (26vh + 50px + 28vh + (30vw / 2 - 25px) + 3px));
-      top: calc(28vh + (30vw / 2 - 25px));
+      top: calc(15vh + 17vh);
       left: calc(23vw + (30vw / 2 + 20vw - 2px));
     }
     .self_introduction {
@@ -350,7 +355,4 @@ header h1 {
     }
     .uchida_keita {
       padding-top: 0;
-    }
-    .free_space {
-      top: calc((30vw / 2 - 25px) + 30vh);
     }
