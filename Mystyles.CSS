@@ -170,7 +170,7 @@ header h1 {
     .liner_right {
       position: absolute;
       width: 22vw;
-      height: calc(195vh - (28vh + 26vh));
+      height: calc(200vh - (28vh + 22vh));
       top: 26vh;
       left: calc(42vh + 22vw);
       border-top: 4px solid;
@@ -232,6 +232,42 @@ header h1 {
   width: 80vw;
   top: 10vw;
   left: 9vw;
+}
+
+.history_wrapper {
+  width: 100%;
+  height: calc(100vh - 14vh);
+  padding: 7vh 0;
+}
+.history_object {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.history_text {
+  display: inline-grid;
+  padding: 3vh 0;
+  width: calc(15vw + 42vh + 44vw - 5vw);
+  font-size: 1.2vw;
+  text-align: right;
+}
+.history_circle_box {
+  display: inline-grid;
+  padding-left: calc(5vw - (3vh / 2) - 1px);
+  width: 3vh;
+  vertical-align: -50%;
+}
+.history_circle {
+  width: 3vh;
+  height: 3vh;
+  border-radius: 100%;
+  background: var(--dark-green);
+}
+.history_date {
+  display: inline-grid;
+  padding-left: 1vw;
+  width: 7vw;
+  font-size: 1.2vw;
 }
 
 .works_background {

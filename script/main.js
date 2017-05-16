@@ -2,6 +2,17 @@
    if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0 || ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
        // スマートフォン/タブレット用コード
        $(function(){
+          $(function(){
+             $('#global_nav').click(function(){
+                 $(this).addClass('motion');
+             });
+             $('.container').click(function(){
+                 $("#global_nav").removeClass("motion");
+             });
+             $('.global_nav_item').click(function(){
+                 $("#global_nav").removeClass("motion");
+             });
+          });
            // スクロールの速度
            var speed = 600; // ミリ秒
           //ページ内スクロール
