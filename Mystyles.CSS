@@ -23,7 +23,7 @@ body {
   height: 100vh;
   background: var(--light-gray); /*footerと同色*/
   font-family: "Mplus 1p";
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .container {
@@ -87,9 +87,9 @@ header h1 {
 .global_nav_item {
   width: 6vw;
   padding: 2vw;
-  margin: 4vh 0 4vh 4vw;
+  margin: 2vh 0 2vh 4vw;
   font-family: "Coves Bold";
-  font-size: 3.3rem;
+  font-size: 2.8rem;
   color: white;
 }
 
@@ -223,6 +223,7 @@ header h1 {
       .about_free_comment {
         padding: 7vh 0 0 4.5vw;
         font-size: 1vw;
+        font-weight: 300;
         color: white;
       }
 
@@ -248,9 +249,32 @@ header h1 {
     display: inline-grid;
     padding: 3vh 0;
     width: calc(15vw + 42vh + 44vw - 5vw);
-    font-size: 1.2vw;
+    font-size: 1vw;
     text-align: right;
   }
+    .history_text_box {
+      display: inline-grid;
+      width: 30vw;
+      padding: 4vh 0;
+      margin-left: calc((15vw + 42vh + 44vw - 5vw) - 30vw);
+      background: var(--dark-green);
+      font-size: 1.1vw;
+      text-align: center;
+      color: var(--white);
+      border-radius: 1.5vw;
+    }
+      .history_text_box::after {
+        position: absolute;
+        content: "";
+        top: 4vh;
+        left: calc(15vw + 42vh + 44vw - 5vw);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 1vh 0 1vh calc(1vh * 1.7320508075);
+        border-color: transparent transparent transparent var(--dark-green);
+      }
+
   .history_circle_box {
     display: inline-grid;
     padding-left: calc(5vw - (3vh / 2) - 1px);
@@ -267,21 +291,22 @@ header h1 {
     display: inline-grid;
     padding-left: 1vw;
     width: 7vw;
-    font-size: 1.2vw;
+    font-size: 1vw;
   }
 .history_object_sub {
   position: absolute;
   top: 4vh;
-  left: -33vw;
+  left: -36vw;
 }
 .history_object_sub::after {
   position: absolute;
   content: "";
-  left: 30vw;
+  top: 3vh;
+  left: calc(15vw + 42vh + 44vw - 4vw);
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 2vh 0 2vh calc(2vh * 1.7320508075);
+  border-width: 1vh 0 1vh calc(1vh * 1.7320508075);
   border-color: transparent transparent transparent var(--dark-green);
 }
 
@@ -321,14 +346,25 @@ header h1 {
         color: white;
       }
   .work_contents_img {
+    margin: 0;
     width: 100%;
     height: 75%;
     background-size: cover;
     background-position: center;
   }
+    .work_content_name {
+      display: flex;
+      margin: 0;
+      font-size: 1.8rem;
+      padding: 1.2vh 0 0.6vh;
+      letter-spacing: 0.1rem;
+    }
     .work_contents_text {
-    font-size: 0.9vw;
-  }
+      display: flex;
+      margin: 0;
+      font-size: 1.3rem;
+      line-height: 1.3;
+    }
 
 
 @media screen and (max-width: 1200px) {
@@ -353,7 +389,7 @@ header h1 {
   .global_nav_item {
     width: 20vw;
     padding: 2vw;
-    margin: 7vh 0;
+    margin: 6vh 0;
     font-size: 2rem;
   }
   .global_section_bar {
@@ -448,6 +484,15 @@ header h1 {
     width: 90vw;
     top: 18vh;
     left: 5vw;
+  }
+
+  .history_object_sub {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .history_object_sub::after {
+    display: none;
   }
 
   .works_wrapper {
