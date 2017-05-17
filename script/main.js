@@ -28,6 +28,12 @@
               $('html,body').animate({ scrollTop: p }, speed, 'easeOutExpo');
               return false;
           });
+          $(".scroll-to-history").click(function () {
+              var i = $(".scroll-to-history").index(this)
+              var p = $("#history").eq(i).offset().top;
+              $('html,body').animate({ scrollTop: p }, speed, 'easeOutExpo');
+              return false;
+          });
           $(".scroll-to-works").click(function () {
               var i = $(".scroll-to-works").index(this)
               var p = $("#works").eq(i).offset().top;
