@@ -31,6 +31,12 @@ body {
   margin: auto;
 }
 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 a:link {color: var(--main-text); text-decoration: none; }
 a:visited { color: var(--main-text); text-decoration: none; }
 p { margin: 1rem 0px;   /* 上下に1em・左右に0px */}
@@ -401,6 +407,16 @@ header h1 {
    body {
      height: 100%;
    }
+   .container {
+     height: 100%;
+   }
+   .header {
+     height: 100vh;
+   }
+   .heading-logo {
+    width: 40vw;
+    padding: 0 calc((100% - 40vw)/2);
+  }
 
   #global_nav {
     transform: translateX(calc(13vw + 150px + 20vw));
@@ -432,18 +448,21 @@ header h1 {
   .about-slanting-background {
     border-bottom: 20vh solid transparent;
   }
+  .about {
+    height: 100vh;
+  }
   .objects_wrapper {
     position: relative;
-    top: 30vh;
+    top: 25vh;
     left: 0;
     width: 88vw;
     margin: auto;
-    height: auto;
+    height: 100%;
   }
   .chige_full_png {
     position: relative;
     width: 35vw;
-    min-width: 150px;
+    min-width: 120px;
     height: auto;
   }
   .chige_name_circle {
@@ -472,7 +491,7 @@ header h1 {
   }
   .liner_right {
     width: 24vw;
-    height: calc(200vh);
+    height: 210vh;
     top: 24vh;
     left: calc(24vw + 40vw - 2px);
     border-top: 2px solid;
@@ -529,20 +548,20 @@ header h1 {
     width: 88vw;
     margin: auto;
     height: auto;
-    padding: 26vh 0 5vh;
+    padding: 26vh 0 8vh;
 }
   .history_text {
     display: inline-grid;
     padding: 3vh 0;
     width: calc(100% - 10vw - 30px);
-    font-size: 1.6rem;
+    font-size: 1rem;
     text-align: right;
   }
     .history_text_box {
       width: 65vw;
       padding: 3vh 0;
       margin-left: calc(100% - 75vw - 30px);
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
       .history_text_box::after {
         top: 3vh;
@@ -556,10 +575,10 @@ header h1 {
   }
   .history_date {
     display: inline-grid;
-    padding-left: 2vw;
-    width: 50px;
+    padding-left: 0;
+    width: calc(75vw + 30px - 66vw - 2vh);
     text-align: right;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
   }
   .history_object_sub {
     position: relative;
@@ -579,28 +598,37 @@ header h1 {
   }
   .work_contents {
     width: calc(100vw - 30vw);
-    margin: 1vh 0;
-    height: calc(35vh);
+    margin: 3vh 0;
+    height: auto;
   }
   .works_contents_stage {
     display: grid;
   }
+  .work_contents_img {
+    height: 46vw;
+  }
+  .work_content_name {
+    font-size: 1.5rem;
+  }
+  .work_contents_text {
+    font-size: 1.2rem;
+  }
+
   .contact_wrapper {
-    padding-top: 25vh;
+    padding-top: 30vh;
     width: 70vw;
     display: inherit;
+    margin-bottom: 10vh;
   }
   .contact_icon {
-    width: 10vw;
-    margin: 0 30vw;
+    width: 14vw;
+    margin: 0 28vw;
   }
   .contact_icon_text {
-    padding-bottom: 5vh;
+    padding-bottom: 6vh;
+    font-size: 1.3rem;
   }
 
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 340px) {
      /*--- 表示領域が420px以下の場合に適用するスタイル（スマホ）---*/
-     .about_me_blocks3 {
-       top: calc(300px + 5vw);
-     }
