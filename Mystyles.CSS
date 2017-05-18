@@ -321,11 +321,13 @@ header h1 {
   width: calc(100vw - 80px - 50vh);
   height: 80vh;
 }
+.works_contents_stage {
+  display: flex;
+}
   .work_contents {
-    display: inline-block;
-    width: calc((100vw - 87px - 50vh) / 3 - 2vw);
-    margin: 1vw;
-    height: calc(40vh - 2vw);
+    width: calc((100vw - 80px - 50vh) / 3);
+    margin: 0.5vw;
+    height: calc(40vh - 1vw);
     transition: all 0.2s 0s ease-in-out;
   }
   .work_contents:hover {
@@ -376,9 +378,14 @@ header h1 {
     .contact_icon {
       width: 5vw;
       margin: 0 6vw;
+      transition: all 0.1s 0s ease-in-out;
     }
     .contact_icon:hover {
-
+      -webkit-transform: scale(1.8);
+      -moz-transform: scale(1.8);
+      -o-transform: scale(1.8);
+      -ms-transform: scale(1.8);
+      transform: scale(0.8);
     }
     .contact_icon_text {
       text-align: center;
@@ -575,7 +582,9 @@ header h1 {
     margin: 1vh 0;
     height: calc(35vh);
   }
-
+  .works_contents_stage {
+    display: grid;
+  }
   .contact_wrapper {
     padding-top: 25vh;
     width: 70vw;
