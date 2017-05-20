@@ -6,10 +6,10 @@
              $('#global_nav').click(function(){
                  $(this).addClass('motion');
              });
-             $('.container').click(function(){
+             $('.global_nav_item').click(function(){
                  $("#global_nav").removeClass("motion");
              });
-             $('.global_nav_item').click(function(){
+             $('.container').click(function(){
                  $("#global_nav").removeClass("motion");
              });
           });
@@ -25,6 +25,12 @@
           $(".scroll-to-about").click(function () {
               var i = $(".scroll-to-about").index(this)
               var p = $("#about").eq(i).offset().top;
+              $('html,body').animate({ scrollTop: p }, speed, 'easeOutExpo');
+              return false;
+          });
+          $(".scroll-to-skill").click(function () {
+              var i = $(".scroll-to-skill").index(this)
+              var p = $("#skill").eq(i).offset().top;
               $('html,body').animate({ scrollTop: p }, speed, 'easeOutExpo');
               return false;
           });
@@ -78,6 +84,10 @@
       $(".scroll-to-about").click(function(e) {
       e.preventDefault();
       $.scrollify.move("#about");
+      });
+      $(".scroll-to-skill").click(function(e) {
+      e.preventDefault();
+      $.scrollify.move("#skill");
       });
       $(".scroll-to-history").click(function(e) {
       e.preventDefault();
