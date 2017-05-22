@@ -9,8 +9,8 @@ html{
   src: url('font/Coves Bold.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Coves light';
-  src: url('font/Coves light.otf') format('opentype');
+  font-family: 'Coves Light';
+  src: url('font/Coves Light.otf') format('opentype');
 }
 
 #root {
@@ -397,14 +397,14 @@ header h1 {
     .work_content_name {
       display: flex;
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 1vw;
       padding: 1.2vh 0 0.6vh;
       letter-spacing: 0.1rem;
     }
     .work_contents_text {
       display: flex;
       margin: 0;
-      font-size: 1.3rem;
+      font-size: 0.75vw;
       line-height: 1.3;
     }
 
@@ -452,6 +452,9 @@ header h1 {
     width: 40vw;
     padding: 0 calc((100% - 40vw)/2);
   }
+  p {
+    margin: 0.5rem 0px;
+  }
 
   #global_nav {
     transform: translateX(calc(13vw + 150px + 20vw));
@@ -480,98 +483,70 @@ header h1 {
     left: 5vw;
     height: 18vh;
   }
-  .about-slanting-background {
-    border-bottom: 20vh solid transparent;
+
+  .about_wrapper{
+    display: grid;
+    padding-top: 25vh;
+    padding-bottom: 10vh;
   }
-  .about {
-    height: 100vh;
-  }
-  .objects_wrapper {
-    position: relative;
-    top: 25vh;
-    left: 0;
-    width: 88vw;
-    margin: auto;
-    height: 100%;
-  }
-  .chige_full_png {
-    position: relative;
-    width: 35vw;
-    min-width: 120px;
-    height: auto;
+  .chige_icon {
+    width: 38vw;
+    height: 38vw;
   }
   .chige_name_circle {
-    top: -26vh;
-    left: calc(80vw - 20vh);
-    width: 24vh;
-    height: 24vh;
+    top: calc(25vh + (38vw - 27vw) / 2);
+    width: 27vw;
+    height: 27vw;
+    left: 34vw;
   }
   .chige_name_Jp {
-    padding-top: 9vh;
-    width: 9vh;
+    padding-top: 9vw;
+    width: 10vw;
   }
   .chige_name_En {
     padding-top: 0.5vh;
-    font-size: 1.3rem;
-  }
-  .liner_left {
-    width: 24vw;
-    height: 24vh;
-    top: 0;
-    left: 40vw;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    border-radius: 0 0 0 3vw;
-    border-color: var(--dark-green);
-  }
-  .liner_right {
-    width: 24vw;
-    height: 210vh;
-    top: 24vh;
-    left: calc(24vw + 40vw - 2px);
-    border-top: 2px solid;
-    border-right: 2px solid;
-    border-radius: 0 3vw 0 0;
-    border-color: var(--dark-green);
-  }
-  .self_introduction {
-    left: 40vw;
-    width: calc(24vw * 2);
-    height: 70vw;
-  }
-  .about_me_blocks1 {
-    width: 48vw;
-    height: 24vh;
-  }
-  .about_me_blocks2 {
-    height: 20vh;
-  }
-  .about_me_blocks3 {
-    height: auto;
-    position: absolute;
-    top: 75vw;
-    right: 0;
-    width: calc(24vw * 2 + 40vw);
-  }
-
-  .school_info {
-    margin: 7vh 0 1vh 4.5vw;
     font-size: 1.2rem;
-    padding-left: 0.15vw;
-    border-radius: 3vw 0 0 3vw;
+  }
+  .about_my_name {
+    margin: 0;
+    padding: 0;
+  }
+  .school_info {
+    margin: 0vh 0 2vh 0vw;
+    font-size: 3.5vw;
   }
   .uchida_keita {
-    margin: 0 4.5vw;
-    font-size: 2rem;
+    margin: 0;
+    font-size: 8vw;
   }
-  .about_skills {
-    padding: 4.5vh 3vw 0 0;
-    font-size: 1.3rem;
+
+.skill_background_box {
+  height: calc(100% - 20vw);
+  }
+  .about_free_comment_box{
+    padding-left: 0;
+    padding-bottom: 5vh;
+  }
+  .about_skill {
+    font-size: 6vw;
+  }
+  .and_others {
+    padding-top: 0vh;
+    font-size: 4.5vw;
   }
   .about_free_comment {
-    padding: 6vh 0 6vh 10vw;
-    font-size: 1.3rem;
+    padding: 6vh 0;
+    font-size: 2.3vw;
+    line-height: 2.5;
   }
+  .about_free_comment::before {
+    top: 5vh;
+    width: 20%;
+  }
+  .strong {
+    font-size: 4vw;
+  }
+
   .background_alphalogo_svg {
     width: 90vw;
     top: 40vh;
@@ -585,7 +560,12 @@ header h1 {
     margin: auto;
     height: auto;
     padding: 26vh 0 8vh;
+    position: relative;
 }
+  .history_time_line{
+    left: auto;
+    right: -0.5px;
+  }
   .history_text {
     display: inline-grid;
     padding: 3vh 0;
@@ -627,7 +607,7 @@ header h1 {
   }
 
   .works_wrapper {
-    padding: 26vh 0 5vh;
+    padding: 26vh 0 8vh;
     width: calc(100vw - 30vw);
     height: calc(100% - 30vh);
   }
