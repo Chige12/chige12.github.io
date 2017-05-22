@@ -1,36 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>chige</title>
-  <meta name "discription" content="Chige"> <!--文章の説明-->
+  <meta name "description" content="Chige-Portfolio-Site"> <!--文章の説明-->
   <link rel="shortcut icon" href="fabicon.ico"> <!--ファビコンの追加-->
   <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="temporary-styles.CSS"> <!--cssファイル呼び出し-->
+  <link rel="stylesheet" href="Mystyles.CSS"> <!--cssファイル呼び出し-->
+  <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
 </head>
 
-<body>
-  <header class="container">
+<body id="root">
+
+<header class="container header" data-section-name="header" id="header">
     <h1>
-    <img class="heading-logo" src="images/Chige_logo2-2.png" alt="Chige_logo">
+      <img class="heading-logo" src="images/Chige_logo2-2.png" alt="Chige_logo">
     </h1>
-  <section class="infomation">
-    大変申し訳ありませんが、現在サイトは調整中のため機能しておりません。
-  </section>
-  <nav class="menu-bar">
-    <ul>
-      <li><a href="https://twitter.com/technictige" target="_blank">
-        <img src="images/twitter.png">
-        </a></li>
-      <li><a href="https://www.facebook.com/chige12f" target="_blank">
-        <img src="images/facebook.png">
-        </a></li>
-      <li><a href="https://chige12.tumblr.com/" target="_blank">
-        <img src="images/tumblr.png">
-        </a></li>
-      </ul>
-  </nav>
-</header>
+  </header>
+
+<nav id="global_nav">
+  <ul class="global_nav_item_top">
+    <li class="global_nav_item"><a href="index.html" class="scroll-to-header">Home</a></li>
+    <li class="global_nav_item"><a href="index.html" class="scroll-to-about">About</a></li>
+    <li class="global_nav_item"><a href="index.html" class="scroll-to-works">Works</a></li>
+    <li class="global_nav_item"><a href="index.html" class="scroll-to-contact">Contact</a></li>
+  </ul>
+</nav>
+<div class="global_section_bar"></div>
+
+<section class="container about" data-section-name="about" id="about">
+  <div class="about-slanting-background-top"></div>
+  <div class="about-slanting-background-bottom"></div>
+  <h2>
+    <a href="index.html" class="scroll-to-about">
+    <img class="section_title" src="images/about.png" alt="About"></a>
+  </h2>
+  <div class="about_wrapper">
+    <div class="chige_icon"></div>
+
+    <div class="chige_name_circle">
+      <img class="chige_name_Jp"src="images/chige-font.png" alt="ちげ">
+      <div class="chige_name_En">Chige</div>
+    </div>
+
+    <div class="about_my_name">
+        <div class="school_info">
+          <p><a href="http://www.nara-k.ac.jp/">
+            NIT, Nara College</a></p>
+          <p><a href="http://www.elec.nara-k.ac.jp/">
+            Dpt.of Electrical Engineering</a> 4th grade</p>
+        </div>
+        <div class="uchida_keita">
+            Uchida Keita
+        </div>
+    </div>
+  </div>
+  <div class="background_alphalogo_svg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1264.99 550"><defs><style>.cls-1{fill:#eaeaea;}</style></defs><title>chige_background_logo</title><g id="レイヤー_2" data-name="レイヤー 2"><g id="レイヤー_1-2" data-name="レイヤー 1"><path class="cls-1" d="M436.58,338.3c8.22,20.77,16.35,41.59,24.73,62.29,2.23,5.5,2.25,10.26-.59,15.72-25,48.24-61.32,85-110.32,108.66-92.15,44.44-197.58,28.82-272.57-39.89-115.93-106.23-100.08-297,32.29-382,68.35-43.92,141.49-51.45,218.07-24.4,3.19,1.13,6.84,4.12,8.06,7.14,17.62,43.59,34.82,87.36,52.27,131,2.42,6.05-1.44,7.36-5.58,9Q328,247.54,273.14,269.3c-8.86,3.51-8.86,3.52-5.46,12.13,3.75,9.5,7.81,18.89,11.17,28.53,1.93,5.55,4.38,6.51,9.82,4.32,36.52-14.69,73.16-29.09,109.76-43.57,9.82-3.88,9.84-3.89,13.71,5.87Q424.38,307.42,436.58,338.3Z"/><path class="cls-1" d="M890.13,431.38l68.06-143.55c-6.67,1.69-11.9,3.2-17.22,4.32C880.25,305,818.8,269.53,799.48,210.59,780.25,151.9,808.15,87,863.66,61.44c57.29-26.43,124.69-6.36,156.67,47.18,5.83,9.76,9.85,20.68,14.08,31.31q39.07,98.15,77.84,196.43c3.13,7.92,3.13,7.94-4.42,10.93q-105,41.6-210.1,83.17c-2.07.82-4.21,1.44-6.32,2.16Z"/><path class="cls-1" d="M393.1,107.27c1.68,1,3.44,2,5,3.16Q537.33,213,676.43,315.75a24.48,24.48,0,0,1,7.77,9.67c7.4,17.66,14.13,35.59,21.38,53.31,2.07,5.05,1.11,7.61-4.1,9.66Q618.62,421,535.94,454c-6.89,2.76-8.4-.85-10.38-5.87Q474.79,319.6,423.88,191.16,409,153.48,394.07,115.79c-1-2.43-1.5-5-2.24-7.55Z"/><path class="cls-1" d="M1177.22,138.1l57.16,37.8c-8.36,5.83-15,11.43-22.46,15.52-54.52,29.83-122.69,4.4-144.65-53.71-18.51-49,4.44-105.81,51.62-127.85,48.73-22.77,106.4-4.87,132.61,41.08,7.73,13.54,11.77,28.11,13.37,43.56.65,6.32-1.31,9.64-7.38,12-24.06,9.18-47.93,18.84-71.87,28.32Z"/><path class="cls-1" d="M712.85,286.9c-10-25.32-19.87-50.71-30.2-75.91-2.49-6.06-1.16-8.63,4.77-10.85,17.13-6.43,34.11-13.24,51-20.17,5.12-2.09,7.82-1.6,10.06,4.13q30.12,77,60.83,153.71c2.09,5.23,1,7.54-4.14,9.51Q779,357.31,753,368c-5.54,2.3-7.88.81-9.93-4.51C733.18,337.9,723,312.42,712.85,286.9Z"/><path class="cls-1" d="M728.27,94.88a50.25,50.25,0,0,1-28.61,65.06c-26.1,10.23-55-2.62-65.35-29.1-9.91-25.24,3.2-55.17,28.38-64.78A50.52,50.52,0,0,1,728.27,94.88Z"/></g></g></svg>
+  </div>
+</section>
+
+<section class="container skill" data-section-name="skill" id="skill">
+  <div class="skill_background_box"></div>
+  <div class="about_free_comment_box">
+      <div class="about_skill">
+        <p>Design, Motion Graphics, Illustration, Web</p>
+        <p class="and_others">... and others</p>
+      </div>
+      <div class="about_free_comment">
+        <p>新しいもの好きの高専生。</p>
+        <p>専門は電気工学のくせに、デザインとフロントエンドを独学で学び中。</p>
+        <p>デッサン教室に通いながら、電磁気学と実験レポートに頭を悩まされる毎日を過ごしています。</p>
+        <p>そして将来はWeb関係のお仕事がしたい！</p>
+        <p class="strong">デザインのできるエンジニアになるぞ！</p>
+      </div>
+  </div>
+</section>
+
+<section class="container history" data-section-name="history" id="history">
+  <h2>
+    <a href="index.html" class="scroll-to-history">
+    <img class="section_title" src="images/history.png" alt="History"></a>
+  </h2>
+  <div class="history_wrapper">
+    <div class="history_time_line"></div>
+    <div class="history_object">
+      <div class="history_text">奈良工業高等専門学校 電気工学科に入学</div>
+      <div class="history_circle_box"><div class="history_circle"></div></div>
+      <div class="history_date">2014/4</div>
+    </div>
+    <div class="history_object">
+      <div class="history_text">本格的に動画制作を始める</div>
+      <div class="history_circle_box"></div>
+      <div class="history_date">秋</div>
+    </div>
+    <div class="history_object">
+      <div class="history_text_box">Motion graphicsのPV動画を初投稿</div>
+      <div class="history_circle_box"><div class="history_circle"></div></div>
+      <div class="history_date">2015/5</div>
+      <div class="history_object_sub">
+        <div class="history_text">現視研紹介Movieの制作</div>
+      </div>
+    </div>
+    <div class="history_object">
+      <div class="history_text">現代視覚文化研究会（現視研）の会長に就任</div>
+      <div class="history_circle_box"></div>
+      <div class="history_date">秋</div>
+    </div>
+    <div class="history_object">
+      <div class="history_text">現視研の新HP制作でデザインを担当</div>
+      <div class="history_circle_box"></div>
+      <div class="history_date">冬</div>
+      <div class="history_object_sub">
+        <div class="history_text">奈良高専紹介Movieの制作</div>
+      </div>
+    </div>
+    <div class="history_object">
+      <div class="history_text">広報委員会の会長に就任</div>
+      <div class="history_circle_box"><div class="history_circle"></div></div>
+      <div class="history_date">2016/4</div>
+    </div>
+    <div class="history_object">
+      <div class="history_text">高専祭のポスターとパンフレット表紙をデザイン</div>
+      <div class="history_circle_box"></div>
+      <div class="history_date">夏</div>
+      <div class="history_object_sub">
+        <div class="history_text">高専祭 学科展でミニプロジェクションマッピングを制作</div>
+      </div>
+    </div>
+    <div class="history_object">
+      <div class="history_text">Webの勉強を始める</div>
+      <div class="history_circle_box"></div>
+      <div class="history_date">秋</div>
+      <div class="history_object_sub">
+        <div class="history_text">アートスクールに通い始める</div>
+      </div>
+    </div>
+    <div class="history_object">
+      <div class="history_text">たてよこウェブアワードに友人と参加</div>
+      <div class="history_circle_box"></div>
+      <div class="history_date">春</div>
+      <div class="history_object_sub">
+        <div class="history_text">情報処理研究会（Joken）に入部</div>
+      </div>
+    </div>
+    <div class="history_object">
+      <div class="history_text_box">Mono-coto innovation 2016でFINALIST 4位</div>
+      <div class="history_circle_box"><div class="history_circle"></div></div>
+      <div class="history_date">2017/4</div>
+    </div>
+  </div>
+</section>
+
+<section class="container" class="works" data-section-name="works" id="works">
+<div class="works_background">
+  <h2>
+    <a href="index.html" class="scroll-to-works">
+    <img class="section_title" src="images/works.png" alt="Works"></a>
+  </h2>
+
+  <div class="works_wrapper">
+    <div class="works_contents_stage">
+      <div class="work_contents">
+        <div class="kosenfes-pamph work_contents_img" ></div>
+        <div class="work_content_name">高専祭パンフレット表紙</div>
+        <p class="work_contents_text">
+          50周年を迎えた高専祭のポスターとパンフレット表紙をデザインしました。
+        </p>
+      </div>
+      <a href="https://nnct-mvccc.sakura.ne.jp/about.html" class="work_contents">
+        <div class="genshiken-movie work_contents_img"></div>
+        <div class="work_content_name">現視研紹介Movie</div>
+        <p class="work_contents_text">
+          創作活動するサークル、現視研の紹介用動画を制作しました。
+        </p>
+      </a>
+      <a href="http://www.mono-coto-innovation.com/" class="work_contents">
+        <div class="MCI-2016 work_contents_img"></div>
+        <div class="work_content_name">Mono-coto innovation 2016</div>
+        <p class="work_contents_text">
+          モノコトイノベーション2016に参加し、FINALISTとして全国大会へ。結果は4位でした。
+        </p>
+      </a>
+    </div>
+    <div class="works_contents_stage">
+      <a href="http://yamasy.info/can-you-read/" class="work_contents">
+        <div class="can-you-read work_contents_img"></div>
+        <div class="work_content_name">難読地名くいず</div>
+        <p class="work_contents_text">
+          たてよこウェブアワード応募作品。友人と制作しました。(スマホ非対応)
+        </p>
+      </a>
+      <div href="" class="work_contents">
+        <div class="keihan work_contents_img"></div>
+        <div class="work_content_name">京阪電車</div>
+        <p class="work_contents_text">
+          模写くらいしかできないのですが、たまに絵を描いています。
+        </p>
+      </div>
+      <div href="" class="work_contents">
+        <div class="swimming-HP work_contents_img">
+          <p class="swimming-HP-text">現在制作中…</p>
+        </div>
+        <div class="work_content_name">奈良高専水泳部ホームページ</div>
+        <p class="work_contents_text">
+          一年以内に更新したいと思ってます。
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section class="container" class="contact" data-section-name="contact" id="contact">
+  <h2>
+    <a href="index.html" class="scroll-to-contact">
+    <img class="section_title" src="images/contact.png" alt="Contact"></a>
+  </h2>
+  <div class="contact_wrapper">
+    <div href="tige1215.technic@gmail.com" class="contact_icon_box">
+      <img class="contact_icon" src="images/mail.png" alt="mail">
+      <p class="contact_icon_text">tige1215.technic@gmail.com</p>
+    </div>
+    <a href="https://twitter.com/technictige" class="contact_icon_box">
+      <img class="contact_icon" src="images/twitter.png" alt="twitter">
+      <p class="contact_icon_text">Twitter: @Technictige</p>
+    </a>
+    <a href="https://www.facebook.com/chige12f" class="contact_icon_box">
+      <img class="contact_icon" src="images/facebook.png" alt="facebook">
+      <p class="contact_icon_text">Facebook: chige12f</p>
+    </a>
+    <a href="http://chige.hatenablog.com/" class="contact_icon_box">
+      <img class="contact_icon" src="images/hatena_blog.png" alt="hatena_blog">
+      <p class="contact_icon_text">Blog: 鍋はすき焼きが好き</p>
+    </a>
+  </div>
+</section>
+
+  <script src="script/jquery-3.1.1.min.js"></script>
+  <script src="script/jquery.easing.v1.3.js"></script>
+  <script src="script/jquery.scrollify.min.js"></script>
+  <script src="script/main.js"></script>
 </body>
+</html>
