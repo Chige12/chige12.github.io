@@ -1,3 +1,28 @@
+
+/**
+ * メーラーを起動してメールを送信する
+ */
+
+window.onload = function() {
+
+    /**
+   * メールに記載する情報を格納する変数
+   */
+    var address, subject, body;
+    var sendmail = document.getElementById('mail');
+
+    sendmail.onclick = function() {
+
+        // メールに記載したい情報をhiddenタグから取得
+        address = 'tige1215.technic@gmail.com';
+        subject = '【コンタクトページのリンクより送信】';
+        body = '以下に内容をどうぞ。';
+
+        location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
+    };
+
+};
+
  var ua = navigator.userAgent;
    if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0 || ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
        // スマートフォン/タブレット用コード

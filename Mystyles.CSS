@@ -40,7 +40,24 @@ body {
   display: block;
   clear: both;
 }
-
+a {
+  cursor: pointer;
+  position: relative;
+	transition: .5s;
+}
+a::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 0;
+	height: 2px;
+	background-color: var(--dark-green);
+	transition: .5s;
+}
+a:hover::after {
+	width: 100%;
+}
 a:link {color: var(--main-text); text-decoration: none; }
 a:visited { color: var(--main-text); text-decoration: none; }
 p { margin: 1rem 0px;   /* 上下に1em・左右に0px */}
@@ -54,8 +71,7 @@ header h1 {
   }
   .heading-logo {
     width: 24vw;  /*画像の大きさ*/
-    margin: 0;
-    padding: 0 calc((100% - 24vw)/2); /*中央そろえ*/
+    margin: 0 calc((100% - 24vw)/2); /*中央そろえ*/
   }
     .menu-bar {
       position: fixed;
@@ -414,7 +430,8 @@ header h1 {
   width: 68vw;
   display: flex;
 }
-  .contact_icon_box {
+  .contact_icon_box::after {
+    display: none;
   }
     .contact_icon {
       width: 5vw;
@@ -450,7 +467,7 @@ header h1 {
    }
    .heading-logo {
     width: 40vw;
-    padding: 0 calc((100% - 40vw)/2);
+    margin: 0 calc((100% - 40vw)/2);
   }
   p {
     margin: 0.5rem 0px;
