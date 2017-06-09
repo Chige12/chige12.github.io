@@ -18,6 +18,7 @@ html{
     --light-gray:   #dddddd;
     --pale-gray:    #eaeaea;
     --dark-green:   #5a5f41;
+    --accent:       #4794bf;
     --black:        rgba(0, 0, 0, 0.70);
     --main-text:    #000000;
   }
@@ -52,8 +53,9 @@ a::after {
 	content: '';
 	width: 0;
 	height: 2px;
-	background-color: var(--dark-green);
+	background-color: var(--accent);
 	transition: .5s;
+  z-index: 0;
 }
 a:hover::after {
 	width: 100%;
@@ -163,6 +165,7 @@ header h1 {
   position: relative;
 }
 .chige_icon {
+  display: inline-table;
   width: 22vw;
   height: 22vw;
   border-radius: 100%;
@@ -209,6 +212,23 @@ header h1 {
     font-family: "Coves Bold";
     font-size: 3vw;
   }
+
+.skill_keywords {
+  padding-top: 10px;
+  font-size: 0.6vw;
+  color: var(--dark-green);
+}
+.skill_keywords span {
+  display: inline-block;
+  background-color: var(--accent);
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: var(--light-gray);
+  margin-right: 3px;
+  margin-bottom: 3px;
+  font-size: 0.7vw;
+
+}
 
 .background_alphalogo_svg {
   position: fixed;
@@ -319,6 +339,9 @@ header h1 {
       color: var(--white);
       border-radius: 1.5vw;
     }
+    .history_text_box a {
+      color: var(--white);
+    }
       .history_text_box::after {
         position: absolute;
         content: "";
@@ -390,12 +413,12 @@ header h1 {
   .work_contents:hover {
     background-color: var(--light-gray);
   }
-  .kosenfes-pamph {background: url('images/kosenfes-pamph.jpg');}
-  .genshiken-movie {background: url('images/genshiken-movie.jpg');}
-  .MCI-2016 {background: url('images/MCI2016.jpg');}
-  .can-you-read {background: url('images/can-you-read.jpg');}
-  .keihan {background: url('images/keihan.jpg');}
-  .swimming-HP {background: #358eb5;}
+  .work_contents_1 {background: url('images/kosenfes-pamph.jpg');}
+  .work_contents_2 {background: url('images/genshiken-movie.jpg');}
+  .work_contents_3 {background: url('images/MCI2016.jpg');}
+  .work_contents_4 {background: url('images/can-you-read.jpg');}
+  .work_contents_5 {background: url('images/ude_sketch.JPG');}
+  .work_contents_6 {background: #358eb5;}
       .swimming-HP-text {
         margin: 0;
         padding-top: 30%;
