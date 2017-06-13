@@ -227,7 +227,6 @@ header h1 {
   margin-right: 3px;
   margin-bottom: 3px;
   font-size: 0.7vw;
-
 }
 
 .background_alphalogo_svg {
@@ -558,6 +557,17 @@ header h1 {
   .uchida_keita {
     margin: 0;
     font-size: 8vw;
+  }
+  .skill_keywords {
+    padding-top: 10px;
+    font-size: 2.5vw;
+  }
+  .skill_keywords span {
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    font-size: 2.5vw;
   }
 
 .skill_background_box {
