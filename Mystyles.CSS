@@ -395,6 +395,31 @@ header h1 {
   background-color: var(--pale-gray);
   z-index: -1;
 }
+
+.display_none{
+  display: none;
+}
+.video_popup_wrapper{
+  position: fixed;
+  background: var(--black);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  transition: all 0.3s 0s ease-in-out;
+}
+.video_popup {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 80vw;
+  z-index: 200;
+}
+
 .works_wrapper {
   margin: auto;
   padding: 10vh 0 0;
@@ -413,19 +438,13 @@ header h1 {
   .work_contents:hover {
     background-color: var(--light-gray);
   }
-  .work_contents_1 {background: url('images/kosenfes-pamph.jpg');}
-  .work_contents_2 {background: url('images/genshiken-movie.jpg');}
-  .work_contents_3 {background: url('images/MCI2016.jpg');}
-  .work_contents_4 {background: url('images/can-you-read.jpg');}
-  .work_contents_5 {background: url('images/ude_sketch.jpg');}
-  .work_contents_6 {background: #358eb5;}
-      .swimming-HP-text {
-        margin: 0;
-        padding-top: 30%;
-        font-size: 1.2vw;
-        text-align: center;
-        color: white;
-      }
+
+  .reel_2017 {background: url('images/Reel-2015-2017.jpg')}
+  .kosenfes-pamph {background: url('images/kosenfes-pamph.jpg');}
+  .genshiken-movie {background: url('images/genshiken-movie.jpg');}
+  .MCI2016 {background: url('images/MCI2016.jpg');}
+  .can-you-read {background: url('images/can-you-read.jpg');}
+  .ude_sketch {background: url('images/ude_sketch.jpg');}
   .work_contents_img {
     margin: 0;
     width: 100%;

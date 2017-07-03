@@ -23,6 +23,17 @@ window.onload = function() {
 
 };
 
+document.getElementById('video_play').addEventListener('click', function(e) {
+      $('#video_popup_wrapper').removeClass('display_none');
+    e.preventDefault();
+});
+document.getElementById('video_popup_wrapper').addEventListener('click', function(e) {
+    console.log("click!");
+      $('#video_popup_wrapper').addClass('display_none');
+    e.preventDefault();
+});
+
+
  var ua = navigator.userAgent;
    if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0 || ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
        // スマートフォン/タブレット用コード
