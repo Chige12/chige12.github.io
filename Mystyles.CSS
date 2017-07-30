@@ -469,7 +469,7 @@ header h1 {
 .contact_wrapper {
   margin: auto;
   padding-top: 42vh;
-  width: 68vw;
+  width: 72vw;
   display: flex;
 }
   .contact_icon_box::after {
@@ -477,7 +477,7 @@ header h1 {
   }
     .contact_icon {
       width: 5vw;
-      margin: 0 6vw;
+      margin: 0 4.5vw;
       transition: all 0.1s 0s ease-in-out;
     }
     .contact_icon:hover {
