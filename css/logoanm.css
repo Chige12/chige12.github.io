@@ -1,0 +1,91 @@
+body {
+  background: #5a5f41;
+  width: 100%;
+  height: 100vh;
+}
+
+.t-anm-logo {
+  margin: auto;
+  width: 24vw;
+}
+.anm-logo {
+  position: relative;
+  width: 461px;
+  height: 176px;
+}
+.a-c {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 176px;
+  height: 176px;
+  border-radius: 100%;
+  background: white;
+  -webkit-clip-path: polygon(0 0, 84% 0, 84% 45%, 56.5% 45%, 56.5% 55%, 84% 55%, 84% 100%, 0 100%);
+  clip-path: polygon(0 0, 84% 0, 84% 45%, 56.5% 45%, 56.5% 55%, 84% 55%, 84% 100%, 0 100%);
+  transition: all 0.8s 0s cubic-bezier(0.05, 0.67, 0.21, 1);
+}
+.a-c:hover{
+  transform: rotate(-360deg);
+}
+.a-h {
+  position: absolute;
+  bottom: 0;
+  left: 164px;
+  width: 70px;
+  height: 135px;
+  background: white;
+  -webkit-clip-path: polygon(0 0, 100% 82%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 82%, 100% 100%, 0% 100%);
+}
+.a-i {
+  position: absolute;
+  bottom: 0;
+  left: 248px;
+  width: 26px;
+  height: 65px;
+  background: white;
+}
+.a-i-maru {
+  position: absolute;
+  bottom: 77px;
+  left: 243px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background: white;
+}
+.a-g {
+  position: absolute;
+  bottom: 0;
+  left: 287.5px;
+  width: 88px;
+  height: 88px;
+  border-radius: 100%;
+  background: white;
+}
+.a-g-maru {
+  position: absolute;
+  bottom: -40px;
+  left: 287.5px;
+  width: 88px;
+  height: 81px;
+  background: white;
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+.a-e {
+  position: absolute;
+  bottom: -2.5px;
+  left: 387px;
+  width: 74px;
+  height: 74px;
+  border-radius: 100%;
+  background: white;
+  -webkit-clip-path: polygonpolygon(0 0, 100% 0, 100% 69%, 50% 69%, 72% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 69%, 50% 69%, 72% 100%, 0 100%);
+  transition: all 0.8s 0s cubic-bezier(0.05, 0.67, 0.21, 1);
+}
+  .a-e:hover{
+  transform: rotate(-360deg);
+  }
