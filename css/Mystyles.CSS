@@ -169,7 +169,7 @@ header h1 {
   width: 22vw;
   height: 22vw;
   border-radius: 100%;
-  background: url('images/Chige.jpg');
+  background: url('../images/Chige.jpg');
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -438,13 +438,13 @@ header h1 {
     background-color: var(--light-gray);
   }
 
-  .reel_2017 {background: url('images/Reel-2015-2017.jpg')}
-  .kosenfes-pamph {background: url('images/kosenfes-pamph.jpg');}
-  .genshiken-movie {background: url('images/genshiken-movie.jpg');}
-  .MCI2016 {background: url('images/MCI2016.jpg');}
-  .can-you-read {background: url('images/can-you-read.jpg');}
-  .ude_sketch {background: url('images/ude_sketch.jpg');}
-  .ticmop {background: url('images/ticmop.jpg');}
+  .reel_2017 {background: url('../images/Reel-2015-2017.jpg')}
+  .kosenfes-pamph {background: url('../images/kosenfes-pamph.jpg');}
+  .genshiken-movie {background: url('../images/genshiken-movie.jpg');}
+  .MCI2016 {background: url('../images/MCI2016.jpg');}
+  .can-you-read {background: url('../images/can-you-read.jpg');}
+  .ude_sketch {background: url('../images/ude_sketch.jpg');}
+  .ticmop {background: url('../images/ticmop.jpg');}
   .work_contents_img {
     margin: 0;
     width: 100%;

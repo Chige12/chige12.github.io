@@ -20,4 +20,20 @@
     <div class="a-g-maru"></div>
     <div class="a-e"></div>
   </div>
+  <canvas width="500" height="200"></canvas>
+  <script type="text/javascript" src="script/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="script/jcanvas.min.js"></script>
+  <script type="text/javascript">
+    $("canvas").drawPolygon({
+      fillStyle: "#6c3",
+      x: 0, y: 0,
+      width: 176, height: 176,
+      radius: 50
+      });
+    $("canvas").drawPolygon({
+      fillStyle: "#6c3",
+      x: 450, y: 100,
+      radius: 50, sides: 5
+      });
+  </script>
 </body>
