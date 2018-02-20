@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>chige</title>
-  <meta name "discription" content="Chige"> <!--文章の説明-->
-  <link rel="shortcut icon" href="fabicon.ico"> <!--ファビコンの追加-->
+  <meta name "discription" content="Chige">
+  <!--文章の説明-->
+  <link rel="shortcut icon" href="fabicon.ico">
+  <!--ファビコンの追加-->
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/Mystyles.CSS"> <!--cssファイル呼び出し-->
+  <link rel="stylesheet" href="css/Mystyles.CSS">
+  <!--cssファイル呼び出し-->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114375722-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114375722-3');
+  </script>
+
 </head>
 
 <body>
@@ -18,45 +35,48 @@
       <div class="logo">
         <img src="images/Chige_logo2-2.png" width="40%" height="40%" alt="Chige">
       </div>
-    <ul class="menu">
-      <li><a href="index.html">
-        <div class="menu_text">
-         <img src="images/about.png" width="20" height="20">
-          ABOUT
-        </div>
-        </a></li>
-        <li><a href="works.html">
-          <div class="menu_text">
-            <img src="images/works.png" width="20" height="20">
-            WORKS
-          </div>
-          </a></li>
-        <li><a href="/contact/">
-          <div class="menu_text">
-           <img src="images/contact.png" width="20" height="20">
-            CONTACT
-          </div>
-          </a></li>
+      <ul class="menu">
+        <li>
+          <a href="index.html">
+            <div class="menu_text">
+              <img src="images/about.png" width="20" height="20"> ABOUT
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="works.html">
+            <div class="menu_text">
+              <img src="images/works.png" width="20" height="20"> WORKS
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/contact/">
+            <div class="menu_text">
+              <img src="images/contact.png" width="20" height="20"> CONTACT
+            </div>
+          </a>
+        </li>
       </ul>
     </section>
   </header>
 
   <main class="">
     <div class="controls">
-      	<button class="filter" data-filter="all">All</button>
-      	<button class="filter" data-filter=".video">VIDEO</button>
-      	<button class="filter active" data-filter=".design">DESIGN</button>
-        <button class="filter active" data-filter=".illustration">ILLUSTRATION</button>
+      <button class="filter" data-filter="all">All</button>
+      <button class="filter" data-filter=".video">VIDEO</button>
+      <button class="filter active" data-filter=".design">DESIGN</button>
+      <button class="filter active" data-filter=".illustration">ILLUSTRATION</button>
 
-      	<button class="sort" data-sort="myorder:asc">Asc</button>
-      	<button class="sort" data-sort="myorder:desc">Desc</button>
+      <button class="sort" data-sort="myorder:asc">Asc</button>
+      <button class="sort" data-sort="myorder:desc">Desc</button>
     </div>
 
     <div id="Container">
       <ul>
         <li class="mix video">
           <div>
-          <img alt="" src="http://dummyimage.com/250x250/1abc9c/ffffff.png" class="th" />
+            <img alt="" src="http://dummyimage.com/250x250/1abc9c/ffffff.png" class="th" />
           </div>
         </li>
         <li class="mix design">
@@ -68,20 +88,22 @@
         <li class="mix illustration">
           <img alt="" src="http://dummyimage.com/250x250/1abc9c/ffffff.png" class="th" />
         </li>
-      </ul>    <!-- /.#Container -->
+      </ul>
+      <!-- /.#Container -->
     </div>
   </main>
 
   <footer class="">
-  あいうえお
+    あいうえお
   </footer>
 
   <script src="jquery-3.1.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
   <script>
-    $(function(){
-    $('#Container').mixItUp();
+    $(function() {
+      $('#Container').mixItUp();
     });
   </script>
 </body>
+
 </html>

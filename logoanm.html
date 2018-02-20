@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="jp">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>chige12</title>
-  <meta name "description" content="Chige-Portfolio-Site"> <!--文章の説明-->
+  <meta name "description" content="Chige-Portfolio-Site">
+  <!--文章の説明-->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/logoanm.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114375722-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114375722-3');
+  </script>
+
 </head>
 
 <body>
@@ -26,14 +41,18 @@
   <script type="text/javascript">
     $("canvas").drawPolygon({
       fillStyle: "#6c3",
-      x: 0, y: 0,
-      width: 176, height: 176,
+      x: 0,
+      y: 0,
+      width: 176,
+      height: 176,
       radius: 50
-      });
+    });
     $("canvas").drawPolygon({
       fillStyle: "#6c3",
-      x: 450, y: 100,
-      radius: 50, sides: 5
-      });
+      x: 450,
+      y: 100,
+      radius: 50,
+      sides: 5
+    });
   </script>
 </body>
