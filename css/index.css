@@ -149,7 +149,9 @@ header h1 {
 .global_nav_item {
     width: 6vw;
     padding: 2vw;
-    margin: 2vh 0 2vh 4vw;
+    margin: 0;
+    margin-top: 1.2vh;
+    margin-left: 4vw;
     font-family: "Coves Bold";
     font-size: 2.8rem;
     color: white;
@@ -515,48 +517,57 @@ header h1 {
     background-color: var(--light-gray);
 }
 
-.reel_2017 {
-    background: url('../images/Reel-2015-2017.jpg')
-}
-
-.kosenfes-pamph {
-    background: url('../images/kosenfes-pamph.jpg');
-}
-
-.e-video {
-    background: url('../images/e-video.jpg');
-}
-
-.genshiken-movie {
-    background: url('../images/genshiken-movie.jpg');
-}
-
-.MCI2016 {
-    background: url('../images/MCI2016.jpg');
-}
-
-.can-you-read {
-    background: url('../images/can-you-read.jpg');
-}
-
-.ude_sketch {
-    background: url('../images/ude_sketch.jpg');
-}
-
-.ticmop {
-    background: url('../images/ticmop.jpg');
-}
-
-.phpconf2017 {
-    background: url('../images/phpconf.jpg');
-}
-
 .work_contents_img {
     margin: 0;
     width: 100%;
     height: 75%;
-    background-size: cover;
+    background-size: auto 100%;
     background-position: center;
+    transition: all 0.2s 0s ease-out;
+}
+
+.work_contents_img:hover {
+    background-size: auto 110%;
+}
+
+.progkaruta {
+    background-image: url('../images/progkaruta.jpg')
+}
+
+.reel_2017 {
+    background-image: url('../images/Reel-2015-2017.jpg')
+}
+
+.kosenfes-pamph {
+    background-image: url('../images/kosenfes-pamph.jpg');
+}
+
+.e-video {
+    background-image: url('../images/e-video.jpg');
+}
+
+.genshiken-movie {
+    background-image: url('../images/genshiken-movie.jpg');
+}
+
+.MCI2016 {
+    background-image: url('../images/MCI2016-2.jpg');
+}
+
+.can-you-read {
+    background-image: url('../images/can-you-read.jpg');
+}
+
+.ude_sketch {
+    background-image: url('../images/ude_sketch.jpg');
+}
+
+.ticmop {
+    background-image: url('../images/ticmop.jpg');
+}
+
+.phpconf2017 {
+    background-image: url('../images/phpconf.jpg');
 }
 
 .work_content_name {
