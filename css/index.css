@@ -211,6 +211,7 @@ header h1 {
 
 .chige_icon {
     display: inline-table;
+    position: absolute;
     width: 22vw;
     height: 22vw;
     border-radius: 100%;
@@ -246,7 +247,7 @@ header h1 {
 }
 
 .about_my_name {
-    margin-left: 16vw;
+    margin-left: calc(16vw + 22vw);
     padding: 3vw 0;
 }
 
